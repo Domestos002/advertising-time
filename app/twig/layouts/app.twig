@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block pageTitle %}{% endblock %}</title>
+
+    <!-- Stylesheets -->
+    {% include "stylesheets.twig" %}
+</head>
+<body>
+<div class="site-wrapper">
+    <!-- Header block -->
+    {% include "header.twig" %}
+    <!-- Header block end -->
+
+    <!-- Block content -->
+    {% block content %}{% endblock %}
+    <!-- Block content end -->
+
+    <!-- Footer block -->
+    {% include "footer.twig" %}
+    <!-- Footer block end -->
+    {#<div class="modal js-modal" data-modal="sample">#}
+    {#<h>Modal</h>#}
+    {#</div>#}
+    {#<div class="modal-wrapper js-modal" data-modal="sample">#}
+    {#<div class="modal login-modal">#}
+    {#<div class="modal-close js-close-modal">#}
+    {#<i class="icon-cross"></i>#}
+    {#</div>#}
+    {#<div class="text-bold fz25 mb20 text-center">Восстановление пароля</div>#}
+    {#<form action="#">#}
+    {#<div class="form-line mb20">#}
+    {#<p class="mb10">Ваш E-mail</p>#}
+    {#<div>#}
+    {#<input type="text" class="standard-input" name="email" placeholder="E-mail">#}
+    {#</div>#}
+    {#</div>#}
+    {#<div class="form-line text-center mb20">#}
+    {#<button class="button button-red button-long button-medium">Восстановить</button>#}
+    {#</div>#}
+    {#<div class="form-line text-center mb20">#}
+    {#<a href="#" class="link-black js-change-modal" data-opening-modal="login" data-closing-modal="password-recover">Вход</a>#}
+    {#</div>#}
+    {#<div class="form-line text-center">#}
+    {#<a href="#" class="link-black js-change-modal" data-opening-modal="registration" data-closing-modal="password-recover">Регистрация</a>#}
+    {#</div>#}
+    {#</form>#}
+    {#</div>#}
+    {#</div>#}
+
+    <!-- Scripts -->
+    {% include "scripts.twig" %}
+</div>
+{#<nav id="slide-menu">#}
+    {#<div id="offcanvas" class="uk-offcanvas" aria-hidden="false">#}
+        {#<div class="uk-position-relative">#}
+            {#<div class="uk-offcanvas-bar uk-offcanvas-bar-show" mode="push">#}
+                {#<i class="uk-offcanvas-bar__close slide-menu__close"></i>#}
+                {#<div class="page-header__search">#}
+                    {#<div class="input-wrapper">#}
+                        {#<input type="text" placeholder="Поиск по сайту">#}
+                    {#</div>#}
+                {#</div>#}
+                {#<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">#}
+                    {#<li class="uk-parent">#}
+                        {#<a class="" href="#">Свадебные платья </a>#}
+                        {#<ul class="uk-nav uk-nav-parent-icon" data-uk-nav>#}
+                            {#<li><a href="#">Вечерние платья</a></li>#}
+                            {#<li><a href="#">Детские платья</a></li>#}
+                            {#<li><a href="#">Шубки</a></li>#}
+                            {#<li><a href="#">Отзывы</a></li>#}
+                            {#<li><a href="#">Наши конкурсы</a></li>#}
+                        {#</ul>#}
+                    {#</li>#}
+                    {#<li class="uk-parent">#}
+                        {#<a class="" href="#">sds sdsds sdsds</a>#}
+                        {#<ul class="uk-nav uk-nav-parent-icon" data-uk-nav>#}
+                            {#<li><a href="#">ds sdsds sdsd sdds</a></li>#}
+                            {#<li><a href="#">sdsd sdsds sdsd</a></li>#}
+                            {#<li><a href="#">sdsd sdsd sdsdsd</a></li>#}
+                            {#<li class="uk-parent">#}
+                                {#<a class="" href="#">sdsdsdsd</a>#}
+                                {#<ul class="uk-nav uk-nav-parent-icon" data-uk-nav>#}
+                                    {#<li><a href="#">fbdfbdfbdf</a></li>#}
+                                    {#<li><a href="#">bdfbfdbdfbd</a></li>#}
+                                    {#<li><a href="#">dbebdfb</a></li>#}
+                                    {#<li><a href="#">reerrrg</a></li>#}
+                                    {#<li><a href="#">egergergrgRGFWEF</a></li>#}
+                                {#</ul>#}
+                            {#</li>#}
+                            {#<li><a href="#">dsd sdsd sdsd sd</a></li>#}
+                        {#</ul>#}
+                    {#</li>#}
+                    {#<li class="">#}
+                        {#<a href="">dsd sdsdsdsd</a></li>#}
+                    {#<li class=""><a href="">sddsd и sdd</a></li>#}
+                    {#<li class=""><a href="">sd</a></li>#}
+                    {#<li class=""><a href="">sdss</a></li>#}
+                {#</ul>#}
+                {#<div class="uk-text-center">#}
+                    {#<a href="tel:84732783896"#}
+                       {#class="offcanvas-phone uk-display-inline-block fz25 text-brand text-semibold">8#}
+                        {#(473) 278-38-96</a>#}
+                {#</div>#}
+
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div id="mobile-filter">#}
+        {#<i class="uk-offcanvas-bar__close slide-menu__close"></i>#}
+    {#</div>#}
+{#</nav>#}
+{#<div class="site-wrapper " id="site-wrapper">#}
+    {#<div class="" id="site-wrapper-overlay"></div>#}
+
+    {#<!-- Header block -->#}
+    {#{% include "header.twig" %}#}
+    {#<!-- Header block end -->#}
+
+    {#<!-- Block content -->#}
+    {#{% block content %}{% endblock %}#}
+    {#<!-- Block content end -->#}
+
+    {#<!-- Footer block -->#}
+    {#{% include "footer.twig" %}#}
+    {#<!-- Footer block end -->#}
+{#</div>#}
+</body>
+</html>

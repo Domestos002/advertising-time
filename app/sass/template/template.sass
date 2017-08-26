@@ -1,0 +1,276 @@
+@import "_switcher"
+@import "modules"
+@import "breadcrumb"
+@import "dd"
+
+*
+	box-sizing: border-box
+
+body
+	color: $text-primary
+	line-height: 1.2em
+	font-size: 18px
+	font-family: $font-base
+	font-weight: normal
+	
+.site-wrapper
+	min-width: 300px
+	//overflow-x: hidden
+	
+p
+	line-height: 1.2em
+
+a
+	text-decoration: none
+	//+trans()
+	&:hover
+		color: $brand * 0.8
+
+	[class*="__phone"]
+		cursor: none
+		pointer-events: none
+		&:hover
+			text-decoration: none !important
+			color: #B2BCC4 !important
+		+respond-to(md)
+			cursor: pointer
+			pointer-events: initial
+			
+input, textarea
+	transition-property: border, background, color, box-shadow, padding
+	transition: all 0.2s linear
+	border: 1px solid #ddd
+	font-family: $font-base
+	font-size: 15px
+	&:focus
+		outline: 0
+		border-color: $brand !important
+		background-color: #fff !important
+	
+textarea
+	width: 100%
+	resize: none
+	padding: 15px
+	font-family: $font-base
+
+.input-wrapper
+	input
+		line-height: 40px
+		width: 100%
+
+textarea
+	width: 100%
+	padding: 10px 20px
+	font-size: 16px
+	
+h1
+	
+	line-height: 1.2em
+h2
+	
+	line-height: 1.2em
+
+h3
+	
+	line-height: 1.2em
+	
+.big-label
+	position: relative
+	&::before
+		content: ''
+		border: 415px solid transparent
+		position: absolute
+		border-top: 275px solid $brand2
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+		z-index: 10
+	&::after
+		content: ''
+		border: 430px solid transparent
+		position: absolute
+		border-top: 288px solid tomato
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+		
+.page-main
+	& > section
+		padding: 35px 0
+		
+.bg-grey
+	background-color: $grey
+	
+.img-link
+	position: relative
+	display: block
+	line-height: 0
+	&:hover
+		&::after
+			opacity: 1
+	&::after
+		content: ''
+		transition: opacity .2s ease
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,.2)
+		opacity: 0
+	img
+		width: 100%
+	
+.button-up
+	color: #fff !important
+	+trans()
+	&:before
+		+chevron(7px, 2px, t, #fff)
+		margin-right: 15px
+		position: relative
+		top: 1px
+		transform: rotate(45deg)
+		content: ''
+	&:hover
+		color: #ebebeb !important
+		&:before
+			border-top-color: #ebebeb !important
+			border-left-color: #ebebeb !important
+			
+.border-2-brand
+	position: relative
+	&::after
+		content: ''
+		width: 100%
+		height: 5px
+		display: block
+		border-radius: 2px
+		position: absolute
+		bottom: 0
+		background-color: $brand2
+			
+.btn
+	display: inline-block
+	cursor: pointer
+	
+	
+.btn-sec
+	box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.5)
+	border-radius: 12px
+	padding: 0 15px 0 15px
+	line-height: 45px
+	color: #fff
+	text-transform: uppercase
+	&:hover
+		box-shadow: none
+		color: #fff
+	&.bg-brand2:hover
+		background-color: $brand2 * 0.8
+		
+.btn-primary
+	padding: 0 15px 0 15px
+	font-size: 17px
+	color: #fff
+	text-decoration: none
+	line-height: 45px
+	text-transform: uppercase
+	font-family: $font-base
+	text-align: center
+	border-radius: 5px
+	+trans()
+	&.bg-brand2
+		&:hover
+			background-color: $brand2 * 0.8
+	&:focus
+		outline: none
+	&:hover
+		color: #fff
+	&.btn-primary--left
+		border-radius: 0 5px 5px 26px
+	&.btn-primary--right
+		border-radius: 5px 0 26px 5px
+	&.btn-primary--top
+		border-radius: 0 0 26px 26px
+	&.btn-primary--right-shadow
+		box-shadow: 3px 4px 0 rgba(178, 178, 178, 0.52)
+		&:hover
+			box-shadow: none
+	&.btn-primary--bordered
+		border: 2px solid #ffffff
+		
+.btn-primary-outline-bg1
+	background-color: transparent
+	border: 3px solid $brand
+	color: $text-primary
+	font-size: 17px
+	cursor: pointer
+	text-decoration: none
+	line-height: 55px
+	position: relative
+	text-align: center
+	transition: all 0.3s ease 0s
+	&:hover
+		background-color: $brand
+		color: #fff
+		
+//.btn-primary-outline-bg2
+
+.page-header__number-overlay
+	position: fixed
+	width: 100%
+	height: 100%
+	overflow-y: scroll
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 200
+	background-color: rgba(0, 0, 0, 0.4)
+	display: none
+	+trans()
+	&.active
+		display: block
+		
+.s35
+	width: 35px
+	height: 35px
+	svg
+		width: 35px
+		height: 35px
+		
+.page-header__number-dd
+	display: none
+	position: absolute
+	padding: 50px 20px 35px 20px
+	top: -8px
+	right: -13px
+	z-index: 210
+	width: 320px
+	box-shadow: 3px 4px 0 rgba(178, 178, 178, 0.52)
+	border-radius: 10px
+	border: 2px solid #ffffff
+	background-color: $brand
+	&.active
+		display: block
+	
+.marked-list
+	& > li
+		display: flex
+		align-items: center
+		position: relative
+		padding-left: 20px
+		& > a
+			color: $text-primary
+			padding: 15px 0
+		&::before
+			content: ''
+			display: inline-block
+			width: 10px
+			position: absolute
+			height: 10px
+			top: 4px
+			left: 0
+			flex-shrink: 0
+			border-radius: 100%
+			background-color: $brand2
+			margin-right: 20px

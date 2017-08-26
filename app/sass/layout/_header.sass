@@ -1,0 +1,52 @@
+.travel-scheme__img
+	margin-right: 8px
+	svg
+		width: 36px
+		height: 36px
+		
+.header-logo
+	max-width: 210px
+	img
+		width: 100%
+		
+.page-header__logo-panel
+	padding: 10px 0
+	
+.page-header__number-toggle
+	width: 35px
+	height: 35px
+	border-radius: 100%
+	background-color: $brand2
+	z-index: 220
+
+.schedule-item
+	background-color: $brand
+	border-radius: 12px
+	width: 32px
+	color: #fff
+	font-size: 16px
+	font-family: $font-base-bold
+	line-height: 35px
+	text-align: center
+	height: 32px
+	&:not(:last-child)
+		margin-right: 7px
+		
+		
+.page-header__nav-list
+	display: flex
+	height: 100%
+	justify-content: flex-start
+	align-items: center
+	& > li
+		+trans()
+		flex-grow: 1
+		text-align: center
+		&:hover
+			background-color: $brand2
+			& > a
+				color: $text-primary
+		& > a
+			display: inline-block
+			padding: 15px
+			flex-grow: 1

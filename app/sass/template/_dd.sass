@@ -1,0 +1,85 @@
+.nav-dropdown
+	display: none
+	position: absolute
+	top: 0
+	vertical-align: top
+	left: 100%
+	background-color: $brand
+	z-index: 20
+	width: 100%
+	min-width: 300px
+	text-align: left
+	&.active
+		display: block
+	li
+		padding: 0 25px
+		line-height: 38px
+		+trans()
+		&:hover
+			background-color: $brand2
+		& > a
+			display: block
+			color: #fff
+			
+		
+.nav-parent
+	position: relative
+
+	
+.page-header__nav-list > .nav-parent & > .nav-dropdown
+	top: 100%
+	left: 0
+	
+.navbar-nav-parent
+	position: relative
+	&::before
+		+chevron(7px, 2px, b, $brand2)
+		transform: rotate(45deg)
+		right: 3px
+		top: 3px
+		position: absolute
+		
+.sidebar-navbar__nav .navbar-nav-dropdown
+	display: none
+	//padding: 0
+	margin: 0
+	padding: 13px 0
+	//-webkit-transform: translateZ(0)
+	//&.active
+	//	display: block
+	& > li
+		position: relative
+		padding-left: 10px
+		user-select: none
+		user-focus: none
+		&:not(:last-child)
+			margin-bottom: 6px
+		&::before
+			content: ''
+			position: absolute
+			top: 8px
+			transform: translateY(-50%)
+			left: 0
+			width: 4px
+			height: 4px
+			border-radius: 100%
+			background-color: $brand2
+		& > a
+			color: $brand
+			user-select: none
+			user-focus: none
+
+.sidebar-navbar__nav
+	& > li:not(:last-child)
+		margin-bottom: 5px
+	li
+		a
+			width: 100%
+			display: block
+			font-size: 16px
+			color: $text-primary
+			font-family: $font-base-light
+			//+trans()
+			&:hover
+				color: $brand2
+				

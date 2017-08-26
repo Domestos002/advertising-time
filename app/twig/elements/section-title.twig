@@ -1,0 +1,14 @@
+
+<div class="section-title-wrapper">
+    <div class="section-title {% if type == 'big' %} section-title__big {% endif %}">
+        <p>{{ title }}</p>
+    </div>
+
+    {% if type == 'subtitled'  %}
+        <div class="section-title__sub">
+            <p>{{ subtitle }}</p>
+        </div>
+    {% endif %}
+</div>
+
+

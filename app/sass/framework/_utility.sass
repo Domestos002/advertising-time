@@ -1,0 +1,499 @@
+//UTILITY
+.inline-block
+	display: inline-block
+
+.block
+	display: block
+
+.inline
+	display: inline
+	
+.position-relative
+	position: relative
+	
+.clearfix
+	&::after
+		display: table
+		content: ''
+		clear: both
+		
+.ovh
+	overflow: hidden
+
+.p-rel
+	position: relative
+	
+	
+.m-top-auto
+	margin-top: auto
+
+.resize-img
+	width: 100%
+	height: auto
+	
+.list-mr-10
+	& > *:not(:last-child)
+		margin-right: 10px
+		
+.list-mr-15
+	& > *:not(:last-child)
+		margin-right: 15px
+
+.lh-normal
+	line-height: 1.2em
+	
+.full-width
+	width: 100%
+	
+.full-height
+	height: 100%
+	
+@each $value in sm, md, lg, xlg
+	.#{$value}-full-width
+		+respond-to(#{$value})
+			width: 100%
+			
+	.#{$value}-block
+		+respond-to(#{$value})
+			display: block
+			
+	.#{$value}-inline-block
+		+respond-to(#{$value})
+			display: inline-block
+		
+
+//FONTS
+@each $value in 10, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 50, 52, 54, 60, 70
+	.fz#{$value}
+		font-size: $value + px
+	
+	.sm-fz#{$value}
+		+respond-to(sm)
+			font-size: $value + px
+			
+	.md-fz#{$value}
+		+respond-to(md)
+			font-size: $value + px
+			
+	.lg-fz#{$value}
+		+respond-to(lg)
+			font-size: $value + px
+			
+	.xlg-fz#{$value}
+		+respond-to(xlg)
+			font-size: $value + px
+		
+
+//TEXT
+.text-primary
+	color: $text-primary
+	
+.text-brand
+	color: $brand
+	& > a
+		color:  $brand
+	
+.text-white
+	color: #fff
+	
+.bg-brand
+	background-color: $brand
+	
+.bg-black
+	background-color: $black
+
+.bg-brand2
+	background-color: $brand2
+	
+.text-brand2
+	color: $brand2
+
+.text-paragraph
+	p
+		line-height: 1.5em
+	p:not(:last-child)
+		margin-bottom: 15px
+	h2
+		margin-bottom: 15px
+	h3
+		margin-bottom: 15px
+
+.text-center
+	text-align: center
+
+.text-bold
+	font-family: $font-base-bold
+	
+.text-light
+	font-family: $font-base-light
+	
+.text-sub
+	font-family: $font-sub
+
+a.text-brand:hover
+	color: $brand * 0.8
+
+a[class*="__phone"]
+	pointer-events: none
+	&:hover
+		color: initial
+
+a[class*="__mail"]
+	text-decoration: underline
+
+.text-through
+	text-decoration: line-through
+
+.text-underline
+	text-decoration: underline
+
+.text-uppercase
+	text-transform: uppercase
+
+@each $value in capitalize, lowercase, uppercase
+	.text-#{$value}
+		text-transform: $value
+	
+	.sm-text-#{$value}
+		+respond-to(sm)
+			text-transform: $value
+	
+	.md-text-#{$value}
+		+respond-to(md)
+			text-transform: $value
+	
+	.lg-text-#{$value}
+		+respond-to(lg)
+			text-transform: $value
+	
+	.xlg-text-#{$value}
+		+respond-to(xlg)
+			text-transform: $value
+
+@each $value in underline, line-through,
+	.text-#{$value}
+		text-decoration: $value
+	
+	.sm-text-#{$value}
+		+respond-to(sm)
+			text-decoration: $value
+	
+	.md-text-#{$value}
+		+respond-to(md)
+			text-decoration: $value
+	
+	.lg-text-#{$value}
+		+respond-to(lg)
+			text-decoration: $value
+	
+	.xlg-text-#{$value}
+		+respond-to(xlg)
+			text-decoration: $value
+	
+	.text-#{$value}-hover
+		text-decoration: none
+		&:hover
+			text-decoration: $value
+	
+	.sm-text-#{$value}-hover
+		text-decoration: none
+		+respond-to(sm)
+			&:hover
+				text-decoration: $value
+	
+	.md-text-#{$value}-hover
+		text-decoration: none
+		+respond-to(md)
+			&:hover
+				text-decoration: $value
+	
+	.lg-text-#{$value}-hover
+		text-decoration: none
+		+respond-to(lg)
+			&:hover
+				text-decoration: $value
+	
+	.xlg-text-#{$value}-hover
+		text-decoration: none
+		+respond-to(xlg)
+			&:hover
+				text-decoration: $value
+
+@each $value in center, left, right
+	.text-#{$value}
+		text-align: $value
+		
+	.sm-text-#{$value}
+		+respond-to(sm)
+			text-align: $value
+	
+	.md-text-#{$value}
+		+respond-to(md)
+			text-align: $value
+	
+	.lg-text-#{$value}
+		+respond-to(lg)
+			text-align: $value
+	
+	.xlg-text-#{$value}
+		+respond-to(xlg)
+			text-align: $value
+
+//INDENTS
+
+.mt-auto
+	margin-top: auto
+
+@each $value in 0, 5, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 65, 70, 80, 85, 90, 95, 100, 120, 150, 250
+	.mb-#{$value}
+		margin-bottom: #{$value}px
+		
+	.list-mb-#{$value}
+		& > *
+			margin-bottom: #{$value}px
+			
+	.sm-mb-#{$value}
+		+respond-to(sm)
+			margin-bottom: #{$value}px
+	
+	.md-mb-#{$value}
+		+respond-to(md)
+			margin-bottom: #{$value}px
+	
+	.lg-mb-#{$value}
+		+respond-to(lg)
+			margin-bottom: #{$value}px
+	
+	.ml-#{$value}
+		margin-left: #{$value}px
+	
+	.sm-ml-#{$value}
+		+respond-to(sm)
+			margin-left: #{$value}px
+	
+	.md-ml-#{$value}
+		+respond-to(md)
+			margin-left: #{$value}px
+	
+	.lg-ml-#{$value}
+		+respond-to(lg)
+			margin-left: #{$value}px
+	
+	.mr-#{$value}
+		margin-right: #{$value}px
+	
+	.sm-mr-#{$value}
+		+respond-to(sm)
+			margin-right: #{$value}px
+	
+	.md-mr-#{$value}
+		+respond-to(md)
+			margin-right: #{$value}px
+	
+	.lg-mr-#{$value}
+		+respond-to(lg)
+			margin-right: #{$value}px
+	
+	.mt-inverse-#{$value}
+		margin-top: -#{$value}px
+	
+	.sm-mt-inverse-#{$value}
+		+respond-to(sm)
+			margin-top: -#{$value}px
+	
+	.md-mt-inverse-#{$value}
+		+respond-to(md)
+			margin-top: -#{$value}px
+	
+	.lg-mt-inverse-#{$value}
+		+respond-to(lg)
+			margin-top: -#{$value}px
+	
+	.xlg-mt-inverse-#{$value}
+		+respond-to(xlg)
+			margin-top: -#{$value}px
+	
+	.mb-inverse-#{$value}
+		margin-bottom: -#{$value}px
+	
+	.sm-mb-inverse-#{$value}
+		+respond-to(sm)
+			margin-bottom: -#{$value}px
+	
+	.md-mb-inverse-#{$value}
+		+respond-to(md)
+			margin-bottom: -#{$value}px
+	
+	.lg-mb-inverse-#{$value}
+		+respond-to(lg)
+			margin-bottom: -#{$value}px
+	
+	.xlg-mb-inverse-#{$value}
+		+respond-to(xlg)
+			margin-bottom: -#{$value}px
+	
+	.ml-inverse-#{$value}
+		margin-left: -#{$value}px
+	
+	.sm-ml-inverse-#{$value}
+		+respond-to(sm)
+			margin-left: -#{$value}px
+	
+	.md-ml-inverse-#{$value}
+		+respond-to(md)
+			margin-left: -#{$value}px
+	
+	.lg-ml-inverse-#{$value}
+		+respond-to(lg)
+			margin-left: -#{$value}px
+	
+	.xlg-ml-inverse-#{$value}
+		+respond-to(xlg)
+			margin-left: -#{$value}px
+	
+	.mr-inverse-#{$value}
+		margin-right: -#{$value}px
+	
+	.sm-mr-inverse-#{$value}
+		+respond-to(sm)
+			margin-right: -#{$value}px
+	
+	.md-mr-inverse-#{$value}
+		+respond-to(md)
+			margin-right: -#{$value}px
+	
+	.lg-mr-inverse-#{$value}
+		+respond-to(lg)
+			margin-right: -#{$value}px
+	
+	.xlg-mr-inverse-#{$value}
+		+respond-to(xlg)
+			margin-right: -#{$value}px
+
+
+//FLEX
+.fx-center
+	justify-content: center
+	
+.fx
+	display: flex
+	
+.fx-inline
+	display: flex
+	
+.fx-justify
+	justify-content: space-between
+	
+.fx-middle
+	align-items: center
+	
+.fx-baseline
+	align-items: baseline
+	
+.fx-bottom
+	align-items: flex-end
+	
+.fx-top
+	align-items: flex-start
+	
+.fx-left
+	justify-content: flex-start
+	
+.fx-right
+	justify-content: flex-end
+	
+.fx-row
+	flex-direction: row
+	
+.fx-strech
+	align-items: stretch
+	
+.fx-wrap
+	flex-wrap: wrap
+	
+.fx-column
+	flex-direction: column
+	
+@each $value in sm, md, lg, xlg
+
+	
+
+	.#{$value}-fx
+		+respond-to(#{$value})
+			display: flex
+
+	
+
+	.#{$value}-fx-justify
+		+respond-to(#{$value})
+			justify-content: space-between
+
+	
+
+	.#{$value}-fx-middle
+		+respond-to(#{$value})
+			align-items: center
+
+	
+
+	.#{$value}-fx-baseline
+		+respond-to(#{$value})
+			align-items: baseline
+
+	
+
+	.#{$value}-fx-bottom
+		+respond-to(#{$value})
+			align-items: flex-end
+
+	
+
+	.#{$value}-fx-top
+		+respond-to(#{$value})
+			align-items: flex-start
+
+	
+
+	.#{$value}-fx-left
+		+respond-to(#{$value})
+			justify-content: flex-start
+
+	
+
+	.#{$value}-fx-right
+		+respond-to(#{$value})
+			justify-content: flex-end
+
+	
+
+	.#{$value}-fx-row
+		+respond-to(#{$value})
+			flex-direction: row
+
+	
+
+	.#{$value}-fx-column
+		+respond-to(#{$value})
+			flex-direction: column
+
+	
+
+	.#{$value}-fx-strech
+		+respond-to(#{$value})
+			align-items: stretch
+
+	.#{$value}-fx-center
+		+respond-to(#{$value})
+			justify-content: center
+
+	
+
+	.#{$value}-fx-wrap
+		+respond-to(#{$value})
+			flex-wrap: wrap
+
+
+.md-list-mr-right-10
+	+respond-to(md)
+		& > *:not(:last-child)
+			margin-right: 10px

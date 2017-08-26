@@ -1,0 +1,87 @@
+.owl-item
+	padding: 1px
+	
+.owl-carousel
+	&.dots
+		.owl-dot
+			width: 16px
+			height: 16px
+			background-color: $brand
+			border-radius: 100%
+			&:not(:last-child)
+				margin-right: 12px
+			&.active
+				background-color: $brand2
+				
+		.owl-dots
+			display: flex
+			position: absolute
+			justify-content: center
+			bottom: -40px
+			left: 50%
+			transform: translateX(-50%)
+	
+	
+	.owl-nav
+		width: 0
+
+	.owl-prev, .owl-next
+		font-size: 0
+		background-color: transparent
+		font-family: $font-icon
+		color: #e1dace
+		&.disabled:before
+			color: #b3b0b1
+	
+	.owl-prev, .owl-next
+		position: absolute
+		top: 50%
+		&.disabled:before
+			color: #b3b0b1
+			
+	&.navs-size-1
+		.owl-prev
+			transform: translate(-85%, -50%) rotate(45deg)
+			left: 0
+			+chevron(30px, 3px, l, #cdc0ad)
+		
+		.owl-next
+			transform: translate(85%, -50%) rotate(45deg)
+			right: 0
+			+chevron(30px, 3px, r, #cdc0ad)
+			
+	&.navs-size-2
+		.owl-prev
+			transform: translate(-85%, -50%) rotate(45deg)
+			left: 0
+			+chevron(15px, 3px, l, #cdc0ad)
+		
+		.owl-next
+			transform: translate(85%, -50%) rotate(45deg)
+			right: 0
+			+chevron(15px, 3px, r, #cdc0ad)
+			
+			
+.sidebar-navbar
+	width: 100%
+	
+.sidebar-navbar__item
+	&:not(:first-child)
+		background-color: $grey
+	
+.sidebar-navbar__item-contain
+	padding: 15px
+	background-color: $grey
+	
+.sidebar-navbar__item-title
+	border-radius: 0 26px 0 0
+	background-color: $brand
+	padding: 10px 15px
+	text-transform: uppercase
+	color: #fff
+	
+.services-block__main
+	display: none
+	
+.services-block__sidebar
+	width: 100% !important
