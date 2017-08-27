@@ -168,3 +168,47 @@
 	+respond-to(dk)
 		width: calc(100% - 310px)
 	
+.pagination__chevron-right, .pagination__chevron-left
+	transform: rotate(45deg)
+	position: relative
+
+.pagination__chevron-right
+	+chevron(10px, 2px, r, $brand)
+	left: -15px
+
+.pagination__chevron-left
+	+chevron(10px, 2px, l, $brand)
+	right: -15px
+	
+.uk-pagination
+	display: inline-block
+	& > li
+		& > a, & > span
+			border-radius: 12px
+			background-color: $brand
+			width: 32px
+			height: 32px
+			font-size: 18px
+			color: #fff
+			text-align: center
+			line-height: 32px
+			+trans()
+			&:hover
+				color: #fff
+				background: $brand2
+		&:last-child > a, &:first-child > a
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: transparent
+			
+			
+.uk-pagination>.uk-active>span
+	background-color: $brand2
+	
+.uk-pagination>li:nth-child(n+2)
+	margin-left: 10px
+	
+.c-hamburger
+	background-color: transparent !important
+	display: inline-block

@@ -4,90 +4,89 @@
     var body = doc.querySelectorAll("body")[0];
     var html = doc.querySelectorAll("html")[0];
 
-    // function slideOut() {
-    //     var slideout = new Slideout({
-    //         'panel': document.getElementById('site-wrapper'),
-    //         'menu': document.getElementById('slide-menu'),
-    //         'padding': 320,
-    //         'tolerance': 70
-    //     });
-    //     var toggle = document.getElementById('filter');
-    //     slideout.disableTouch();
-    //     var offcanvas = document.getElementById('offcanvas');
-    //     var wrapper = document.getElementById('site-wrapper');
-    //     var mobileFilter = document.getElementById('mobile-filter');
-    //     var overlay = document.getElementById('site-wrapper-overlay');
-    //     var b = $('body');
-    //
-    //     var jumpFix = function () {
-    //         var bWidth = b.outerWidth();
-    //         var scrollbar = window.innerWidth - bWidth;
-    //
-    //         slideout.on('beforeopen', function() {
-    //             overlay.classList.add("open");
-    //             overlay.classList.add("open");
-    //             if (window.innerWidth - bWidth !=0){
-    //                 b.css({"padding-right" : scrollbar});
-    //             }
-    //         });
-    //
-    //         slideout.on('close', function() {
-    //             overlay.classList.remove("open");
-    //             b.css({"padding-right" : "0"});
-    //         });
-    //     };
-    //
-    //     overlay.addEventListener('click', function() {
-    //         slideout.close();
-    //     });
-    //
-    //     if (toggle){
-    //         toggle.addEventListener('click', function() {
-    //             slideout.on('beforeopen', function() {
-    //                 slideout.menu.classList.add("open");
-    //                 mobileFilter.classList.add("open");
-    //                 offcanvas.classList.remove("open");
-    //             });
-    //             slideout.toggle();
-    //         });
-    //     }
-    //
-    //     jumpFix();
-    //
-    //     window.addEventListener("resize", function () {
-    //         jumpFix();
-    //         // $(".page-header__logo-panel").css({"position" : "fixed"});
-    //         cardMobileContent();
-    //     });
-    //
-    //
-    //     // overlay.addEventListener('click', function() {
-    //     //     slideout.close($(".page-header__logo-panel").outerHeight() + " :height suka");
-    //     // });
-    //
-    //     var burgers = document.querySelectorAll('.hamburger');
-    //     var closes = document.querySelectorAll('.slide-menu__close');
-    //     for (var j = 0; j < closes.length; j++) {
-    //         var close = closes[j];
-    //         close.addEventListener('click', function() {
-    //             slideout.close();
-    //         });
-    //     }
-    //     for (var i = 0; i < burgers.length; i++) {
-    //         var burger = burgers[i];
-    //         burger.addEventListener('click', function() {
-    //             slideout.on('beforeopen', function() {
-    //                 slideout.menu.classList.add("open");
-    //                 mobileFilter.classList.remove("open");
-    //                 offcanvas.classList.add("open");
-    //             });
-    //             slideout.toggle();
-    //         });
-    //     }
-    //
-    //
-    //
-    // }
+    function slideOut() {
+        var slideout = new Slideout({
+            'panel': document.getElementById('site-wrapper'),
+            'menu': document.getElementById('slide-menu'),
+            'padding': 320,
+            'tolerance': 70
+        });
+        var toggle = document.getElementById('filter');
+        slideout.disableTouch();
+        var offcanvas = document.getElementById('offcanvas');
+        var wrapper = document.getElementById('site-wrapper');
+        var mobileFilter = document.getElementById('mobile-filter');
+        var overlay = document.getElementById('site-wrapper-overlay');
+        var b = $('body');
+
+        var jumpFix = function () {
+            var bWidth = b.outerWidth();
+            var scrollbar = window.innerWidth - bWidth;
+
+            slideout.on('beforeopen', function() {
+                overlay.classList.add("open");
+                overlay.classList.add("open");
+                if (window.innerWidth - bWidth !=0){
+                    b.css({"padding-right" : scrollbar});
+                }
+            });
+
+            slideout.on('close', function() {
+                overlay.classList.remove("open");
+                b.css({"padding-right" : "0"});
+            });
+        };
+
+        overlay.addEventListener('click', function() {
+            slideout.close();
+        });
+
+        if (toggle){
+            toggle.addEventListener('click', function() {
+                slideout.on('beforeopen', function() {
+                    slideout.menu.classList.add("open");
+                    mobileFilter.classList.add("open");
+                    offcanvas.classList.remove("open");
+                });
+                slideout.toggle();
+            });
+        }
+
+        jumpFix();
+
+        window.addEventListener("resize", function () {
+            jumpFix();
+            // $(".page-header__logo-panel").css({"position" : "fixed"});
+        });
+
+
+        // overlay.addEventListener('click', function() {
+        //     slideout.close($(".page-header__logo-panel").outerHeight() + " :height suka");
+        // });
+
+        var burgers = document.querySelectorAll('.hamburger');
+        var closes = document.querySelectorAll('.slide-menu__close');
+        for (var j = 0; j < closes.length; j++) {
+            var close = closes[j];
+            close.addEventListener('click', function() {
+                slideout.close();
+            });
+        }
+        for (var i = 0; i < burgers.length; i++) {
+            var burger = burgers[i];
+            burger.addEventListener('click', function() {
+                slideout.on('beforeopen', function() {
+                    slideout.menu.classList.add("open");
+                    mobileFilter.classList.remove("open");
+                    offcanvas.classList.add("open");
+                });
+                slideout.toggle();
+            });
+        }
+
+
+
+    }
     function carousels(){
         var portfolio = $(".portfolio-slider ");
         var clients = $(".clients-slider");
@@ -234,6 +233,7 @@
         carousels();
         mobileDD();
         navbarNav();
+        slideOut();
     });
 
 })(window, document, window.jQuery);

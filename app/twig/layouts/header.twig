@@ -1,20 +1,21 @@
 <header class="page-header" id="page-header">
+    <div class="hamburger"></div>
     <section class="page-header__logo-panel">
         <div class="container">
             <div class="section-inner">
                 <div class="grid">
-                    <div class="width-1-4 fx fx-center fx-middle">
+                    <div class="width-1-4 lg-width-1-2 fx fx-center lg-fx-left fx-middle">
                         <a href="#" class="header-logo">
                             <img src="images/logo.svg" alt="">
                         </a>
                     </div>
-                    <div class="width-1-4 fx fx-center fx-middle">
+                    <div class="width-1-4 lg-width-1-2 fx fx-center lg-fx-right fx-middle">
                         {% include "../components/shedule.twig" %}
                     </div>
-                    <div class="width-1-4 fx fx-center fx-middle">
+                    <div class="width-1-4 lg-width-1-2 fx fx-center lg-fx-left fx-middle">
                         {% include "../components/travel.twig" %}
                     </div>
-                    <div class="width-1-4 fx fx-center fx-middle">
+                    <div class="width-1-4 lg-width-1-2 fx fx-center lg-fx-right fx-middle">
                         <div class="page-header__number position-relative fx fx-middle">
                             <p class="fz27">+7(473) 251 ..</p>
                             <span class="page-header__number-toggle ml-5">
@@ -92,6 +93,9 @@
                     <ul class="page-header__nav-list">
                         <li><a href="#">ГЛАВНАЯ</a></li>
                         <li class="nav-parent">
+                            <button class="c-hamburger c-hamburger--htx">
+                                <span>toggle menu</span>
+                            </button>
                             <a href="#">УСЛУГИ & ЦЕНЫ</a>
                             <ul class="nav-dropdown">
                                 <li><a class="1" href="#">1нспорте</a></li>
@@ -119,6 +123,9 @@
                             </ul>
                         </li>
                         <li class="nav-parent">
+                            <button class="c-hamburger c-hamburger--htx">
+                                <span>toggle menu</span>
+                            </button>
                             <a href="#">КОМПЛЕКСНЫЕ РЕШЕНИЯ</a>
                             <ul class="nav-dropdown">
                                 <li><a class="1" href="#">Реклама на транспорте</a></li>

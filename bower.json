@@ -13,6 +13,7 @@
     "owl.carousel": "^2.2.1",
     "jquery": "^1.11.2",
     "animejs": "^2.0.2",
-    "velocity": "^1.5.0"
+    "velocity": "^1.5.0",
+    "Animating-Hamburger-Icons": "*"
   }
 }
