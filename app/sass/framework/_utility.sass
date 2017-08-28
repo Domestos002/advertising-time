@@ -8,6 +8,10 @@
 .inline
 	display: inline
 	
+	
+.no-wrap
+	white-space: nowrap
+	
 .position-relative
 	position: relative
 	
@@ -243,6 +247,26 @@ a[class*="__mail"]
 
 .mt-auto
 	margin-top: auto
+	
+@each $value in 0, 1, 2, 3, 4, 5
+	.order-#{$value}
+		order: #{$value}
+
+	.sm-order-#{$value}
+		+respond-to(sm)
+			order: #{$value}
+		
+	.md-order-#{$value}
+		+respond-to(md)
+			order: #{$value}
+		
+	.lg-order-#{$value}
+		+respond-to(lg)
+			order: #{$value}
+		
+	.xlg-order-#{$value}
+		+respond-to(xlg)
+			order: #{$value}
 
 @each $value in 0, 5, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 65, 70, 80, 85, 90, 95, 100, 120, 150, 250
 	.mb-#{$value}
@@ -278,6 +302,9 @@ a[class*="__mail"]
 	.lg-ml-#{$value}
 		+respond-to(lg)
 			margin-left: #{$value}px
+			
+	.mt-#{$value}
+		margin-top: #{$value}px
 	
 	.mr-#{$value}
 		margin-right: #{$value}px

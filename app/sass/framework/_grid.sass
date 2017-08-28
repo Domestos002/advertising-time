@@ -78,7 +78,7 @@
 		+respond-to(exlg)
 			width: unquote("#{$width}%") //wddwds
 			
-@each $value in 0, 15, 20, 30, 35, 40, 50, 70, 100, 115
+@each $value in 0, 15, 20, 30, 35, 40, 50, 60, 65, 70, 100, 115
 	.grid-#{$value}
 		margin-left: -#{$value}px
 		margin-top: -#{$value}px
@@ -87,7 +87,6 @@
 			box-sizing: border-box
 			padding-left: #{$value}px
 			padding-top: #{$value}px
-			display: flex
 			flex-wrap: wrap
 			
 	
