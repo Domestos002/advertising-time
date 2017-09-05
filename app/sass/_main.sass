@@ -1,6 +1,20 @@
+
 .owl-item
 	padding: 1px
 	
+.icon-links
+	.icon-wrapper
+		height: 87px //dwdwdwd
+	
+.thumbnails-banner
+	.thumbnail__img
+		height: 83px
+	.thumbnail
+		&:not(:last-child)
+			margin-bottom: 20px
+		max-width: 250px
+		margin: 0 auto
+		
 .owl-carousel
 	&.dots
 		.owl-dot
@@ -80,3 +94,95 @@
 	text-transform: uppercase
 	color: #fff
 	
+.button-group
+	.btn
+		+respond-to(md)
+			font-size: 16px
+	
+			
+.w-235
+	min-width: 235px
+	
+.big-label-area
+	padding-top: 20px
+	margin-bottom: -85px
+	+respond-to(lg)
+		margin-bottom: 30px
+		
+.slide-menu__close
+	margin-left: auto
+	margin: 20px 15px 20px auto
+		
+#mobile-filter
+	.sidebar-navbar__item-title
+		border-radius: 0
+		
+.contacts-map
+	height: 530px
+	position: relative
+	+respond-to(md)
+		margin-bottom: -20px
+	.section-title
+		position: absolute
+		z-index: 20
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+	.section-title-wrapper
+		margin-bottom: 0
+	+respond-to(md)
+		height: 300px
+		
+.all-services-btn
+	display: none
+	
+.all-services-btn
+	+respond-to(lg)
+		display: block
+		
+.portfolio-block__filter
+	margin-top: -10px
+	
+.portfolio-sizer-element
+	width: 8.33333%
+	
+.portfolio-block__filter-btn
+	line-height: 30px
+	background-color: $brand
+	border-radius: 5px
+	margin-top: 10px
+	display: inline-block
+	vertical-align: middle
+	color: #fff
+	cursor: pointer
+	padding: 0 15px
+	+trans()
+	&:hover
+		background-color: $brand2
+	&:not(:last-child)
+		margin-right: 15px
+		
+.portfolio-item__image
+	width: 100%
+	overflow: hidden
+	line-height: 0
+	img
+		width: 100%
+		height: auto
+
+.portfolio-item__title
+	font-size: 24px
+	
+.portfolio-item__text
+	font-size: 14px
+	
+.portfolio-item__caption
+	padding: 15px
+	background-color: $grey
+		
+.portfolio-item
+	overflow: hidden
+	//&.portfolio-item--h2
+	//	height: 464px
+	//&.portfolio-item--h1
+	//	height: 220px

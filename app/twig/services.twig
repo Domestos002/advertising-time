@@ -88,8 +88,10 @@
                             </div>
                         </div>
                         <div class="services-block__main width-9 lg-width-12">
-                            <div class="mb-40">
-                                <div class="fz30 text-uppercase mb-20">
+
+                            <div class="mb-35">
+                                <div class="mb-40">
+                                <div class="fz30 md-fz22 text-uppercase mb-20">
                                     <p>Объемные буквы в Воронеже </p>
                                 </div>
                                 <div class="text-paragraph">
@@ -108,6 +110,10 @@
                                 {% include 'elements/goods-item.twig' with {title: 'Объемные буквы с контражурной подсветкой.', text: 'Объемные буквы с контражурной подсветкой – считается одним из наиболее стильных типов вывесок. За счет своей оригинальности, стильности и правильно подобранного освещения буквы с контражуром смотрятся очень респектабельно и солидно. Они могут использоваться, как: фасадные и интерьерные вывески, логотипы для ресепшн.'} %}
                             </div>
                             {% include 'components/pagination.twig' %}
+                            </div>
+                            <div class="text-center all-services-btn">
+                                <span class="mr-15 minw300 btn-filter btn btn-primary btn-primary--top btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21">все услуги</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,14 +122,14 @@
         <section>
             <div class="container">
                 <div class="section-inner">
-                    <div class="banner">
-                        <div class="banner-left">
+                    <div class="banner bg-brand">
+                        <div class="banner-image">
                             <div class="banner-circle"></div>
                             <div class="banner__icon">
-                                <img src="images/podarok.svg" alt="">
+                                <svg class="icon-gift"><use xlink:href="images/svg-icons.svg#gift" /></svg>
                             </div>
                         </div>
-                        <div class="banner-right fx fx-middle">
+                        <div class="banner-contain fx fx-middle">
                             <div class="text-paragraph text-white">
                                 <p>Рекламные вывески из объемных букв широко применяются как в наружной, так и в
                                     интерьерной рекламе(внутри помещений). Они используются при оформлении банков,
@@ -141,34 +147,34 @@
             <div class="container">
                 <div class="section-inner">
                     {% include "elements/section-title.twig" with {"title": "Наша продукция" ,"type" : "big"} %}
-                    <div class="grid grid-20">
-                        <div class="width-1-3">
+                    <div class="grid grid-20 button-group fx-center">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Вывески</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Объемные буквы</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Баннеры</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Световые короба</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Брендирование
                                 авто</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Оформление витрин</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Информационные
                                 стенды</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Штендеры</a>
                         </div>
-                        <div class="width-1-3">
+                        <div class="width-1-3 lg-width-1-2 md-width-12">
                             <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Таблички</a>
                         </div>
                     </div>
@@ -176,6 +182,7 @@
             </div>
         </section>
     </main>
+
 
 
 {% endblock %}

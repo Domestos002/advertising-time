@@ -17,12 +17,27 @@
 
     loop();
 
+    function reset(callback) {
+        for (var i = 0; i < parentsLength; i++) {
+            var parent = parents[i];
+            var dd = parent.querySelector('.nav-dropdown');
+            dd.classList.remove("active");
+        }
+        callback();
+    }
+
     function show(el, dd){
-        dd.classList.add("active");
+        reset(function (){
+            dd.classList.add("active");
+        });
+
     }
 
     function hide(el, dd) {
-        dd.classList.remove("active");
+        setTimeout(function () {
+            dd.classList.remove("active");
+        }, 400);
+
     }
 
     // window.addEventListener("load", showcaseInit);

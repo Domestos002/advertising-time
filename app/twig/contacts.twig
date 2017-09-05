@@ -1,0 +1,102 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    <main class="page-main">
+        <div class="breadcrumb">
+            <div class="container">
+                {% include 'components/breadcrumb.twig' with {items: [{title: 'Главная', url: 'index.html'}, {title: 'Курсы', url: '#'}, {title: 'Индивидуальное обучение'}]} %}
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    <div class="fz30 md-fz22 text-uppercase mb-20">
+                        <p>Контакты агентства «Рекламное время»</p>
+                    </div>
+                    <div class="list-mb-25">
+                        <div class="banner bg-grey ">
+                            <div class="grid full-width fx-middle p-0-135 lg-p0">
+                                <div class="width-8 lg-width-12  fx fx-left lg-fx-center">
+                                    <a href="tel:84732151515" class="contacts__phone fz30 text-primary">8 (473)
+                                        215-15-15</a>
+                                </div>
+                                <div class="width-4  lg-width-12 fx fx-right lg-fx-center">
+                                    <a href="mailto:info@r-time.ru" class="contacts__mail text-primary">
+                                        info@r-time.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner bg-grey ">
+                            <div class="grid grid-20 full-width fx-middle p-0-135 lg-p0">
+                                <div class="width-8  lg-width-12 fx fx-left lg-fx-center">
+                                    <div class="text-left">
+                                        <div class="fz21 text-uppercase text-bold mb-15 lg-text-center">
+                                            <p>адрес:</p>
+                                        </div>
+                                        <div class="text-left lg-text-center">
+                                            <p>394016, г. Воронеж,</p>
+                                            <p>Московский проспект, д. 11/6</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="width-4 lg-width-12  fx fx-right lg-fx-center">
+                                    <div class="text-center">
+                                        <div class="fz21 text-uppercase mb-10">
+                                            <p>Режим работы</p>
+                                        </div>
+                                        {% include "components/shedule.twig" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner bg-brand banner--reverse">
+                            <div class="banner-image">
+                                <div class="banner-circle"></div>
+                                <div class="banner__icon">
+                                    <svg class="icon-gift">
+                                        <use xlink:href="images/svg-icons.svg#gift"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="banner-contain fx fx-middle lg-fx-center">
+
+                                <div>
+                                    <div class="fz21 mb-20 text-uppercase">
+                                        <p>Реквизиты компании:</p>
+                                    </div>
+                                    <div class="text-white text-right">
+                                        <table class="td-left full-width">
+                                            <tr>
+                                                <td>ООО</td>
+                                                <td>"Рекламное Время"</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ИНН</td>
+                                                <td>366218821309</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ОГРН</td>
+                                                <td>312366808900023</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="contacts-map" id="map">
+            {% include "elements/section-title.twig" with {"title": "Схема проезда"} %}
+        </div>
+    </main>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/YaMap.js"></script>
+
+{% endblock %}

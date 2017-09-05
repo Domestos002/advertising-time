@@ -8,20 +8,73 @@
 	max-width: 210px
 	img
 		width: 100%
+	+respond-to(sm)
+		max-width: 160px
 		
+.minw300
+	min-width: 300px
+		
+.page-header__number-dd
+	.btn
+		width: 255px
+		
+.page-header__phone
+	color: $text-primary
+
 .page-header__logo-panel
 	padding: 10px 0
 	
 .page-header__number-toggle
+	z-index: 220
+	.icon-trubka-wrapper
+		+trans()
+		cursor: pointer
+		&:hover
+			background-color: $brand2 * 0.8
+			
+	&.active
+		.icon-trubka-wrapper
+			display: none
+		position: relative
+		width: 35px
+		height: 35px
+		background-color: $brand2
+		border-radius: 100%
+		+trans()
+		&:hover
+			background-color: $brand2 * 0.9
+		&::before, &::after
+			position: absolute
+			content: ''
+			width: 21px
+			height: 3px
+			background-color: #fff
+			top: 50%
+			left: 50%
+		
+		
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+		
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)
+	
+			
+	
+.icon-trubka-wrapper
 	width: 35px
 	height: 35px
+	display: flex
+	align-items: center
+	justify-content: center
 	border-radius: 100%
 	background-color: $brand2
-	z-index: 220
 	
 .tablet-nav-panel
 	padding: 15px 0
 	background-color: $grey
+	+respond-to(sm)
+		padding: 10px 0
 
 .schedule-item
 	background-color: $brand
@@ -46,6 +99,7 @@
 		+trans()
 		flex-grow: 1
 		display: flex
+		position: relative
 		align-items: center
 		text-align: center
 		&:hover
@@ -56,4 +110,17 @@
 			display: inline-block
 			padding: 15px
 			flex-grow: 1
+			line-height: 1em
+			font-size: 16px
+			color: $text-primary
+		
 			
+				
+.nav-parent
+	.hamburger
+		&:hover
+			background-color: transparent
+		padding: 0
+		width: 25px
+		height: 22px
+		margin-left: 15px

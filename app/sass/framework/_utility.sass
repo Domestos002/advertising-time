@@ -1,9 +1,40 @@
 //UTILITY
 .inline-block
 	display: inline-block
+	
+.fx-grow-1
+	flex-grow: 1
+	
+.hidden
+	display: none !important
+	
+.lg-p0
+	+respond-to(lg)
+		padding: 0
+	
+//.icon-wrapper
+//	height: 87px
+
+.lh-0
+	line-height: 0
 
 .block
 	display: block
+	
+.centered
+	margin: 0 auto
+	
+.inline-flex
+	display: inline-flex
+	
+.border-2-brand
+	&.md-border-2-brand-none
+		+respond-to(md)
+			&::after
+				display: none
+				
+.pt-20
+	padding-top: 20px
 
 .inline
 	display: inline
@@ -38,6 +69,10 @@
 .list-mr-10
 	& > *:not(:last-child)
 		margin-right: 10px
+		
+.list-mr-20
+	& > *:not(:last-child)
+		margin-right: 20px
 		
 .list-mr-15
 	& > *:not(:last-child)
@@ -91,6 +126,8 @@
 //TEXT
 .text-primary
 	color: $text-primary
+	a
+		color: $text-primary
 	
 .text-brand
 	color: $brand
@@ -141,6 +178,10 @@ a[class*="__phone"]
 	pointer-events: none
 	&:hover
 		color: initial
+	+respond-to(lg)
+		pointer-events: initial
+		&:hover
+			color: $brand * 0.8
 
 a[class*="__mail"]
 	text-decoration: underline
@@ -268,13 +309,28 @@ a[class*="__mail"]
 		+respond-to(xlg)
 			order: #{$value}
 
-@each $value in 0, 5, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 65, 70, 80, 85, 90, 95, 100, 120, 150, 250
+@each $value in 0, 5, 7, 8, 9, 10, 11, 15, 20, 25, 30, 35, 40, 45, 50, 60, 65, 70, 80, 85, 90, 95, 100, 120, 150, 250
 	.mb-#{$value}
 		margin-bottom: #{$value}px
 		
 	.list-mb-#{$value}
-		& > *
+		& > *:not(:last-child)
 			margin-bottom: #{$value}px
+			
+	.sm-list-mb-#{$value}
+		& > *:not(:last-child)
+			+respond-to(sm)
+				margin-bottom: #{$value}px
+			
+	.md-list-mb-#{$value}
+		& > *:not(:last-child)
+			+respond-to(md)
+				margin-bottom: #{$value}px
+			
+	.lg-list-mb-#{$value}
+		& > *:not(:last-child)
+			+respond-to(lg)
+				margin-bottom: #{$value}px
 			
 	.sm-mb-#{$value}
 		+respond-to(sm)

@@ -4,23 +4,23 @@
 	list-style: none
 	padding: 15px 0
 	font-family: $font-base-light
-	margin-top: -10px
-	flex-wrap: wrap //wdwdwwwwdwdwdwdwdwddwd
+	margin-top: -42px
+	flex-wrap: wrap
 	
 	.breadcrumbs__item
 		padding-top: 10px
 		display: flex
 		align-items: center
-		
+		&:not(:last-child)
+			margin-right: 15px
 		&:not(:first-child)
 			position: relative
-			
 			&::before
 				display: block
 				content: '|'
 				font-family: $font-base-light
 				color: $brand
-				margin-left: 10px
+				
 				margin-right: 10px
 	
 	.breadcrumbs__text,

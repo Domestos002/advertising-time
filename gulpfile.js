@@ -16,8 +16,9 @@ const gulp = require('gulp'),
     browserSync = require('browser-sync'),
     purify = require('gulp-purifycss'),
     cssnano =  require('gulp-cssnano'),
-    svgSprite = require('gulp-svg-sprite'),
+    svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
+    path = require('path'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace');
 
@@ -73,42 +74,23 @@ const sources = {
 /* DEVELOPMENT GULP TASKS ------------------------------------------------------
 
  ---------------------------------------------------------------------------- */
-gulp.task('svgSpriteBuild', function () {
-    return gulp.src(assetsDir + 'images/svg/*.svg')
-    // minify svg
-        .pipe(svgmin({
-            js2svg: {
-                pretty: true
-            }
-        }))
-        // remove all fill, style and stroke declarations in out shapes
-        .pipe(cheerio({
-            run: function ($) {
-                $('[fill]').removeAttr('fill');
-                $('[stroke]').removeAttr('stroke');
-                $('[style]').removeAttr('style');
-            },
-            parserOptions: {xmlMode: true}
-        }))
-        // cheerio plugin create unnecessary string '&gt;', so replace it.
-        .pipe(replace('&gt;', '>'))
-        // build svg sprite
-        .pipe(svgSprite({
-            mode: {
-                symbol: {
-                    sprite: "../sprite.svg",
-                    render: {
-                        scss: {
-                            dest:'../../../sass/_sprite.sass',
-                            template: 'images/svg/' + "sass/template/_sprite_template.scss"
-                        }
+gulp.task('svgstore', function () {
+    return gulp
+        .src('app/images/svg-icons/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
                     }
-                }
-            }
+                }]
+            };
         }))
-        .pipe(gulp.dest(assetsDir + 'images/svg/'));
+        .pipe(svgstore())
+        .pipe(gulp.dest('app/images/'));
 });
-gulp.task('svgSprite', ['svgSpriteBuild', 'svgSpriteSass']);
 /* Error Handler ---------------------------------------------------------------
  ---------------------------------------------------------------------------- */
 
