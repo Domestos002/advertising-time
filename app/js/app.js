@@ -173,6 +173,7 @@
                 sidebarFilter.children().appendTo(sidebar);
             }
         }
+
         wdwdw();
         window.addEventListener('resize', function () {
             wdwdw();
@@ -365,7 +366,7 @@
         });
     }
 
-    function autoHeightJq(){
+    function autoHeightJq() {
         var target = $('.thumbnails-banner .thumbnail');
         var target2 = $('.thumbnails-services .thumbnail-text');
         var target1 = $('.thumbnails-services .thumbnail-caption');
@@ -377,8 +378,8 @@
                 var targetEl = targetArr[j];
                 var highestBox = 0;
                 if (win.innerWidth >= 480) {
-                    targetEl.each(function(){
-                        if($(this).height() > highestBox){
+                    targetEl.each(function () {
+                        if ($(this).height() > highestBox) {
                             highestBox = $(this).height();
                         }
                     });
@@ -391,6 +392,7 @@
             }
 
         }
+
         doIt();
         win.addEventListener("resize", function () {
             doIt();
@@ -401,12 +403,66 @@
 
     (function () {
         var Shuffle = win.Shuffle;
-        var Filter = function (elementContainer) {
-            this.filterBtns = doc.querySelectorAll(elementContainer + ".")
-        }
+        var Filter = function (filterContainer, elementContainer) {
+            this.filterContainer = filterContainer;
+            this.elementContainer = elementContainer;
+            this.getFilterBtns = function () {
+                var arr = filterContainer.children;
+                var arrLength = arr.length;
+                this.filterBtns = [];
+                for (var i = 0; i < arrLength; i++) {
+                    var btn = arr[i];
+                    this.filterBtns.push(btn);
+                }
+            }.bind(this);
+            this.getFilterBtns();
+            this.handleClick();
+            this.initialize();
+        };
+
+        Filter.prototype.reset = function () {
+            var arr = this.filterBtns;
+            var arrlength = arr.length;
+            for (var i = 0; i < arrlength; i++) {
+                var item = arr[i];
+                item.classList.remove("active");
+            }
+        };
+
+        Filter.prototype.initialize = function () {
+            this.myShuffle = new Shuffle(this.elementContainer, {
+                itemSelector: '.portfolio-item',
+                sizer: '.portfolio-sizer-element',
+                buffer: 1
+            });
+        };
+
+
+        Filter.prototype.handleClick = function () {
+            this.filterContainer.addEventListener('click', function () {
+                var target = event.target;
+
+
+                if (target.getAttribute('data-filter-value')) {
+                    if (!(target.classList.contains('active'))) {
+                        this.reset();
+                        target.classList.add("active");
+                        console.log(target.getAttribute('data-filter-value') + " :values");
+                        this.myShuffle.filter(target.getAttribute('data-filter-value'));
+                    }
+                }
+
+            }.bind(this));
+
+        };
+
+
+        doc.addEventListener("DOMContentLoaded", function () {
+            var PortfolioFilter = new Filter(doc.querySelector(".js-portfolio-filter"), doc.querySelector(".js-portfolio-container"));
+        });
     })();
-    
-    
+
+
     win.addEventListener("load", function () {
         autoHeightJq();
         $('input[name="phone"]').mask('+7 (999) 999-99-99');
@@ -421,28 +477,26 @@
 
 
     doc.addEventListener("DOMContentLoaded", function () {
-        var Shuffle = window.Shuffle;
-        var btn = doc.querySelectorAll(".portfolio-block__filter-btn.avto")[0];
-        var item = doc.querySelectorAll(".portfolio-block__item");
-
-        var myShuffle = new Shuffle(document.querySelector('.js-shuffle-container'), {
-            itemSelector: '.portfolio-item',
-            sizer: '.portfolio-sizer-element',
-            buffer: 1
-        });
-
-        btn.addEventListener('click', function () {
-            myShuffle.filter('car');
-        });
-
-        var elems = doc.querySelectorAll(".portfolio-block__item");
-        imagesLoaded( elems, function () {
-            myShuffle.layout();
-        } );
+        // var Shuffle = window.Shuffle;
+        // var btn = doc.querySelectorAll(".portfolio-block__filter-btn.avto")[0];
+        // var item = doc.querySelectorAll(".portfolio-block__item");
+        //
+        // var myShuffle = new Shuffle(document.querySelector('.js-shuffle-container'), {
+        //     itemSelector: '.portfolio-item',
+        //     sizer: '.portfolio-sizer-element',
+        //     buffer: 1
+        // });
+        //
+        // btn.addEventListener('click', function () {
+        //     myShuffle.filter('car');
+        // });
+        //
+        // var elems = doc.querySelectorAll(".portfolio-block__item");
+        // imagesLoaded( elems, function () {
+        //     myShuffle.layout();
+        // } );
 
     });
-
-
 
 
 })(window, document, window.jQuery);
