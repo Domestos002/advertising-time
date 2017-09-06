@@ -395,17 +395,7 @@
         win.addEventListener("resize", function () {
             doIt();
         });
-
-
     }
-
-    (function () {
-        var Shuffle = win.Shuffle;
-        var Filter = function (elementContainer) {
-            this.filterBtns = doc.querySelectorAll(elementContainer + ".")
-        }
-    })();
-    
     
     win.addEventListener("load", function () {
         autoHeightJq();
@@ -421,24 +411,7 @@
 
 
     doc.addEventListener("DOMContentLoaded", function () {
-        var Shuffle = window.Shuffle;
-        var btn = doc.querySelectorAll(".portfolio-block__filter-btn.avto")[0];
-        var item = doc.querySelectorAll(".portfolio-block__item");
 
-        var myShuffle = new Shuffle(document.querySelector('.js-shuffle-container'), {
-            itemSelector: '.portfolio-item',
-            sizer: '.portfolio-sizer-element',
-            buffer: 1
-        });
-
-        btn.addEventListener('click', function () {
-            myShuffle.filter('car');
-        });
-
-        var elems = doc.querySelectorAll(".portfolio-block__item");
-        imagesLoaded( elems, function () {
-            myShuffle.layout();
-        } );
 
     });
 

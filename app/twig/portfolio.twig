@@ -25,26 +25,21 @@
                         <span class="portfolio-block__filter-btn" data-filter-value="nameplate" >Таблички</span>
                         <span class="portfolio-block__filter-btn" data-filter-value="showcase" >Оформление витрин</span>
                     </div>
-                    <div class="portfolio-block__contain js-shuffle-container grid grid-20">
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter car", "title": "Winline", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car letter banner", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car letter banner", "title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "/267/476"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car", "title": "Студия красоты", "text" : "Стелла-навигатор в составе комплексного оформления гостиничного комплекса.", "img" : "/267/356/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter nameplate", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter nameplate", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter showcase", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter nameplate", "title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "/267/476"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter", "title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "/267/476"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car", "title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/475/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car banner", "title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/475/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car banner signboard car", "title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/475/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba standers", "title": "Море сgrуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba standers signboard ", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba standers showcase", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba lightbox banner", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba lightbox banner", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba lightbox stands", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        <div class="portfolio-sizer-element"></div>
+                    <div class="portfolio-block__contain masonry-grid clearfix" data-columns>
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Winline", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "267x150"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "267x150"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "267x476"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"text" : "Стелла-навигатор в составе комплексного оформления гостиничного комплекса.", "img" : "267x356"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "265x150"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "265x150"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "265x150"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "267x476"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "267x476"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "265x475"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "265x475"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Море сgrуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "285x160"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "285x160"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "285x160"} %}
                     </div>
                 </div>
             </div>

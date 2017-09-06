@@ -182,7 +182,29 @@
 		
 .portfolio-item
 	overflow: hidden
-	//&.portfolio-item--h2
-	//	height: 464px
-	//&.portfolio-item--h1
-	//	height: 220px
+	
+.clearfix
+	&::after
+		clear: both
+		content: ''
+		display: table
+
+.column
+	float: left
+
+[data-columns]:before
+	display: none
+
+.size-1of4
+	width: 25%
+
+.masonry-grid[data-columns]:before
+	content: '4 .column.size-1of4'
+	
+.masonry-grid
+	margin-left: -20px
+	margin-right: -20px
+	margin-top: -20px
+	.portfolio-item
+		padding-left: 20px
+		padding-top: 20px
