@@ -2,10 +2,6 @@
 .owl-item
 	padding: 1px
 	
-.icon-links
-	.icon-wrapper
-		height: 87px //dwdwdwd
-	
 .thumbnails-banner
 	.thumbnail__img
 		height: 83px
@@ -14,7 +10,13 @@
 			margin-bottom: 20px
 		max-width: 250px
 		margin: 0 auto
-		
+		+respond-to(sm)
+			height: auto !important
+			height: initial !important
+			
+.pb-7
+	padding-bottom: 7px
+
 .owl-carousel
 	&.dots
 		.owl-dot
@@ -53,27 +55,53 @@
 		&.disabled:before
 			color: #b3b0b1
 			
+	&.navs-size-1, &.navs-size-2
+		.owl-prev
+			transform: translate(-85%, -50%) rotate(45deg)
+			left: -15px
+		.owl-next
+			transform: translate(85%, -50%) rotate(45deg)
+			right: -15px
+		@media only screen and (max-width: 1300px)
+			.owl-prev
+				left: 5%
+				top: 100%
+				transform: translate(0, 50%) rotate(90deg)
+				
+			.owl-next
+				right: 5%
+				top: 100%
+				transform: translate(0, 50%) rotate(-90deg)
+				
+			.owl-prev, .owl-next
+				width: 50px
+				height: 50px
+				border-radius: 100%
+				border: none
+				background-color: $brand2
+				-webkit-background-size: cover
+				+trans()
+				background-size: 30px
+				background-repeat: no-repeat
+				background-position: center 60%
+				background-image: url(../images/svg-icons/arrow-carousel.svg)
+				&:hover
+					background-color: $brand2 * 0.9
+			
 	&.navs-size-1
 		.owl-prev
-			transform: translate(-85%, -50%) rotate(45deg)
-			left: 0
-			+chevron(30px, 3px, l, #cdc0ad)
+			+chevron(30px, 3px, l, $brand)
 		
 		.owl-next
-			transform: translate(85%, -50%) rotate(45deg)
-			right: 0
-			+chevron(30px, 3px, r, #cdc0ad)
+			+chevron(30px, 3px, r, $brand)
 			
+	
 	&.navs-size-2
 		.owl-prev
-			transform: translate(-85%, -50%) rotate(45deg)
-			left: 0
-			+chevron(15px, 3px, l, #cdc0ad)
+			+chevron(15px, 3px, l, #333333)
 		
 		.owl-next
-			transform: translate(85%, -50%) rotate(45deg)
-			right: 0
-			+chevron(15px, 3px, r, #cdc0ad)
+			+chevron(15px, 3px, r, #333333)
 			
 			
 .sidebar-navbar
@@ -92,6 +120,7 @@
 	background-color: $brand
 	padding: 10px 15px
 	text-transform: uppercase
+	font-family: $font-base-semibold
 	color: #fff
 	
 .button-group
@@ -99,6 +128,9 @@
 		+respond-to(md)
 			font-size: 16px
 	
+			
+.m-top-165
+	margin-top: 165px
 			
 .w-235
 	min-width: 235px
@@ -108,7 +140,13 @@
 	margin-bottom: -85px
 	+respond-to(lg)
 		margin-bottom: 30px
-		
+		background-color: $brand2
+		padding: 20px 15px 0 15px
+		border-bottom: 4px solid #ffffff
+		margin: 0 -15px 30px -15px
+	+respond-to(md)
+		margin: 0 -15px 15px -15px
+
 .slide-menu__close
 	margin-left: auto
 	margin: 20px 15px 20px auto
@@ -140,6 +178,9 @@
 	+respond-to(lg)
 		display: block
 		
+.minw175
+	min-width: 175px
+		
 .portfolio-block__filter
 	margin-top: -10px
 	
@@ -153,6 +194,7 @@
 	margin-top: 10px
 	display: inline-block
 	vertical-align: middle
+	font-family: $font-base-semibold
 	color: #fff
 	cursor: pointer
 	padding: 0 15px
@@ -161,28 +203,183 @@
 		background-color: $brand2
 	&:not(:last-child)
 		margin-right: 15px
+	+respond-to(md)
+		line-height: 25px
+		font-size: 14px
+		&:not(:last-child)
+			margin-right: 10px
+
+			
 		
 .portfolio-item__image
 	width: 100%
+	border: 1px solid #eee
+	height: auto
 	overflow: hidden
+	position: relative
+	display: block
 	line-height: 0
 	img
 		width: 100%
 		height: auto
+	&:hover
+		.portfolio-item__overlay-panel
+			opacity: 1
+		&+.portfolio-item__caption
+			border-bottom-color: $brand2
+
+.portfolio-item__overlay-panel
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+	+trans()
+	opacity: 0
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background-color: rgba(0, 0, 0, 0.5)
+		
+.buy-it-wrapper
+	+respond-to(lg)
+		background-color: $grey
 
 .portfolio-item__title
-	font-size: 24px
+	font-size: 22px
+	margin-bottom: 10px
 	
 .portfolio-item__text
 	font-size: 14px
 	
 .portfolio-item__caption
+	flex-grow: 1
 	padding: 15px
+	+trans()
 	background-color: $grey
+	border-bottom: 3px solid $brand
+	
+.portfolio-block-fb
+	max-width: 750px
+	width: 100%
+	z-index: 2000
+	background-color: #fff
+	
+
+.portfolio-block-fb__main
+	width: calc(100% - 265px)
+	//+respond-to(lg)
+	//	width: 100%
+	
+.portfolio-block-fb__side
+	width: 240px
+	//+respond-to(lg)
+	//	width: 100%
+
+.buy-it
+	margin-top: 25px
+	.icon-info
+		height: 85px
+	.banner__icon
+		width: 140px
+		height: 140px
 		
+.fancybox-show-nav .fancybox-arrow
+	opacity: 1
+	
+.buy-it__right
+	padding: 20px
+	background-color: $grey
+	
+.buy-it__left
+	padding: 20px
+	+respond-to(lg)
+		display: none
+
 .portfolio-item
 	overflow: hidden
-	//&.portfolio-item--h2
-	//	height: 464px
-	//&.portfolio-item--h1
-	//	height: 220px
+	display: flex
+	flex-direction: column
+
+.doc-link
+	+trans()
+	position: absolute
+	z-index: 20
+	bottom: 0
+	left: 50%
+	transform: translateX(-50%)
+	
+.portfolio-block__category-name
+	padding: 0 15px
+	background-color: $brand
+	border-radius: 5px
+	color: #fff
+	line-height: 30px
+	display: inline-block
+	margin-bottom: 10px
+
+.fancybox-close-small
+	width: 40px
+	height: 40px
+	top: -20px
+	right: -20px
+	&::after
+		top: 0
+		right: 0
+		width: 40px
+		height: 40px
+		background: $brand2
+		line-height: 40px
+		font-size: 35px
+		color: #fff
+	&:hover
+		&::after
+			background: $brand2 * 0.9
+			color: #fff
+	@media only screen and (max-width: 800px)
+		top: 0
+		right: 0
+		&::after
+			border-radius: 0 5px 0 5px
+	
+.fancybox-slide>*
+	overflow: visible
+	
+.banner-carousel
+	&.dots
+		margin-bottom: 60px
+		.owl-dots
+			bottom: -30px
+		&.mb-90
+			margin-bottom: 90px
+			+respond-to(lg)
+				margin-bottom: 60px
+				
+	+respond-to(lg)
+		.banner, .banner__v2
+			margin: 0
+			
+.fancybox-arrow--left
+	transform: rotate(90deg)
+	left: 30px
+.fancybox-arrow--right
+	transform: rotate(-90deg)
+	right: 30px
+	
+	
+			
+.fancybox-arrow
+	&:after
+		width: 50px
+		height: 50px
+		background-color: rgb(255, 144, 0)
+		background-size: 30px
+		background-image: url(../images/svg-icons/arrow-carousel.svg)
+		border-radius: 100%
+		border-width: initial
+		border-style: none
+		border-color: initial
+		border-image: initial
+		transition: all 0.3s ease 0s
+		background-repeat: no-repeat
+		background-position: center 60%

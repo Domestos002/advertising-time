@@ -1,6 +1,6 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Главная страница{% endblock %}
+{% block pageTitle %}Портфолио{% endblock %}
 
 {% block content %}
 
@@ -13,38 +13,425 @@
         <section class="portfolio-block">
             <div class="container">
                 <div class="section-inner">
-                    <div class="portfolio-block__filter mb-30">
-                        <span class="portfolio-block__filter-btn" data-filter-value="all" >Все работы</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="letter" >Объемные буквы</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="car" >Брендирование авто</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="stands" >Информационные стенды</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="lightbox" >Световые короба</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="standers" >Штендеры</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="signboard" >Вывески</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="banner" >Баннеры</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="nameplate" >Таблички</span>
-                        <span class="portfolio-block__filter-btn" data-filter-value="showcase" >Оформление витрин</span>
+                    {% include 'elements/page-title.twig' with {title: 'Портфолио'} %}
+                    <div class="portfolio-block__filter mb-50 lg-mb-30">
+                        <span class="portfolio-block__filter-btn">Все работы</span>
+                        <span class="portfolio-block__filter-btn">Объемные буквы</span>
+                        <span class="portfolio-block__filter-btn">Брендирование авто</span>
+                        <span class="portfolio-block__filter-btn">Информационные стенды</span>
+                        <span class="portfolio-block__filter-btn">Световые короба</span>
+                        <span class="portfolio-block__filter-btn">Штендеры</span>
+                        <span class="portfolio-block__filter-btn">Вывески</span>
+                        <span class="portfolio-block__filter-btn">Баннеры</span>
+                        <span class="portfolio-block__filter-btn">Таблички</span>
+                        <span class="portfolio-block__filter-btn">Оформление витрин</span>
                     </div>
-                    <div class="portfolio-block__contain js-shuffle-container grid grid-20">
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter car", "title": "Winline", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car letter banner", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car letter banner", "title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "/267/476"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car", "title": "Студия красоты", "text" : "Стелла-навигатор в составе комплексного оформления гостиничного комплекса.", "img" : "/267/356/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter nameplate", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter nameplate", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter showcase", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter nameplate", "title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "/267/476"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "letter", "title": "Клиника", "text" : "Реализовано комплексное оформление фасада и входной группы, с использованием объемных букв, световых коробов, кронштейнов, широкоформатной печати.", "img" : "/267/476"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car", "title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/475/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car banner", "title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/475/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "car banner signboard car", "title": "Море суши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/475/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba standers", "title": "Море сgrуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba standers signboard ", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba standers showcase", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba lightbox banner", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba lightbox banner", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        {% include "elements/portfolio-block-item.twig" with {"groups" : "koroba lightbox stands", "title": "Море сrgуши", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/285/160/"} %}
-                        <div class="portfolio-sizer-element"></div>
+                    <div class="portfolio-block__contain fx-center grid grid-20 mb-40">
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom1", "fb" : "gallery", "title": "Winline", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom2", "fb" : "gallery", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom3", "fb" : "gallery", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/267/150/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom4", "fb" : "gallery", "title": "Студия красоты", "text" : "Стелла-навигатор в составе комплексного оформления гостиничного комплекса.", "img" : "/267/356/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom5", "fb" : "gallery", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom6", "fb" : "gallery", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom6", "fb" : "gallery", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
+                        {% include "elements/portfolio-block-item.twig" with {"srcMobile" : "images/portfolio1.jpg", "src" : "#fb-zoom6", "fb" : "gallery", "title": "ГлавРыбсбыт", "text" : "Одни из самых сложных в производстве рекламные конструкций", "img" : "/265/150/"} %}
+                    </div>
+                    <div class="portfolio-block__popups hidden">
+                        <div class="portfolio-block-fb" id="fb-zoom1">
+                            <div class="">
+                                <div class="fz20 text-bold text-left mb-24">
+                                    <p>Входная группа для магазин хоз-товаров Домашний интерес</p>
+                                </div>
+                                <div class="fx fx-justify portfolio-block__inner">
+                                    <div class="portfolio-block-fb__main">
+                                        <div class="showcase">
+                                            <div class="showcase-viewport">
+                                                <div class="showcase-main">
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="showcase-thumbnails">
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio1.jpg"
+                                                >
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio2.jpg"
+                                                >
+                                                    <img src="images/portfolio2.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-block-fb__side">
+                                <span class="portfolio-block__category-name">
+                                    Брендирование авто
+                                </span>
+                                        <div class="mb-20">
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Клиент:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Сервисный центр "SAMSUNG"</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Услуги:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Изготовление и монтаж вывески из композита с акриловыми буквами,
+                                                    оформление интерьера, оклейка фасадных окон.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-block-fb" id="fb-zoom2">
+                            <div class="">
+                                <div class="fz20 text-bold text-left mb-24">
+                                    <p>Входная группа для магазин хоз-товаров Домашний интерес</p>
+                                </div>
+                                <div class="fx fx-justify portfolio-block__inner">
+                                    <div class="portfolio-block-fb__main">
+                                        <div class="showcase">
+                                            <div class="showcase-viewport">
+                                                <div class="showcase-main">
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="showcase-thumbnails">
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio1.jpg"
+                                                >
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio2.jpg"
+                                                >
+                                                    <img src="images/portfolio2.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-block-fb__side">
+                                <span class="portfolio-block__category-name">
+                                    Брендирование авто
+                                </span>
+                                        <div class="mb-20">
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Клиент:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Сервисный центр "SAMSUNG"</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Услуги:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Изготовление и монтаж вывески из композита с акриловыми буквами,
+                                                    оформление интерьера, оклейка фасадных окон.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-block-fb" id="fb-zoom3">
+                            <div class="">
+                                <div class="fz20 text-bold text-left mb-24">
+                                    <p>Входная группа для магазин хоз-товаров Домашний интерес</p>
+                                </div>
+                                <div class="fx fx-justify portfolio-block__inner">
+                                    <div class="portfolio-block-fb__main">
+                                        <div class="showcase">
+                                            <div class="showcase-viewport">
+                                                <div class="showcase-main">
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="showcase-thumbnails">
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio1.jpg"
+                                                >
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio2.jpg"
+                                                >
+                                                    <img src="images/portfolio2.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-block-fb__side">
+                                <span class="portfolio-block__category-name">
+                                    Брендирование авто
+                                </span>
+                                        <div class="mb-20">
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Клиент:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Сервисный центр "SAMSUNG"</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Услуги:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Изготовление и монтаж вывески из композита с акриловыми буквами,
+                                                    оформление интерьера, оклейка фасадных окон.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-block-fb" id="fb-zoom4">
+                            <div class="">
+                                <div class="fz20 text-bold text-left mb-24">
+                                    <p>Входная группа для магазин хоз-товаров Домашний интерес</p>
+                                </div>
+                                <div class="fx fx-justify portfolio-block__inner">
+                                    <div class="portfolio-block-fb__main">
+                                        <div class="showcase">
+                                            <div class="showcase-viewport">
+                                                <div class="showcase-main">
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="showcase-thumbnails">
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio1.jpg"
+                                                >
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio2.jpg"
+                                                >
+                                                    <img src="images/portfolio2.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-block-fb__side">
+                                <span class="portfolio-block__category-name">
+                                    Брендирование авто
+                                </span>
+                                        <div class="mb-20">
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Клиент:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Сервисный центр "SAMSUNG"</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Услуги:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Изготовление и монтаж вывески из композита с акриловыми буквами,
+                                                    оформление интерьера, оклейка фасадных окон.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-block-fb" id="fb-zoom5">
+                            <div class="">
+                                <div class="fz20 text-bold text-left mb-24">
+                                    <p>Входная группа для магазин хоз-товаров Домашний интерес</p>
+                                </div>
+                                <div class="fx fx-justify portfolio-block__inner">
+                                    <div class="portfolio-block-fb__main">
+                                        <div class="showcase">
+                                            <div class="showcase-viewport">
+                                                <div class="showcase-main">
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="showcase-thumbnails">
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio1.jpg"
+                                                >
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio2.jpg"
+                                                >
+                                                    <img src="images/portfolio2.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-block-fb__side">
+                                <span class="portfolio-block__category-name">
+                                    Брендирование авто
+                                </span>
+                                        <div class="mb-20">
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Клиент:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Сервисный центр "SAMSUNG"</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Услуги:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Изготовление и монтаж вывески из композита с акриловыми буквами,
+                                                    оформление интерьера, оклейка фасадных окон.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-block-fb" id="fb-zoom6">
+                            <div class="">
+                                <div class="fz20 text-bold text-left mb-24">
+                                    <p>Входная группа для магазин хоз-товаров Домашний интерес</p>
+                                </div>
+                                <div class="fx fx-justify portfolio-block__inner">
+                                    <div class="portfolio-block-fb__main">
+                                        <div class="showcase">
+                                            <div class="showcase-viewport">
+                                                <div class="showcase-main">
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="showcase-thumbnails">
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio1.jpg"
+                                                >
+                                                    <img src="images/portfolio1.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio2.jpg"
+                                                >
+                                                    <img src="images/portfolio2.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                                <div class="showcase-thumbnail"
+                                                     data-img="images/portfolio3.jpg"
+                                                >
+                                                    <img src="images/portfolio3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-block-fb__side">
+                                <span class="portfolio-block__category-name">
+                                    Брендирование авто
+                                </span>
+                                        <div class="mb-20">
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Клиент:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Сервисный центр "SAMSUNG"</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-bold text-brand mb-10">
+                                                <p>Услуги:</p>
+                                            </div>
+                                            <div class="">
+                                                <p>Изготовление и монтаж вывески из композита с акриловыми буквами,
+                                                    оформление интерьера, оклейка фасадных окон.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "components/pagination.twig" %}
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    <div class="banner bg-brand">
+                        <div class="banner-image">
+                            <div class="banner-circle"></div>
+                            <div class="banner__icon">
+                                <svg class="icon-info">
+                                    <use xlink:href="images/svg-icons.svg#info"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="banner-contain fx fx-middle">
+                            <div class="text-paragraph text-white">
+                                <p>Здесь представлены некоторые из работ по наружной и интерьерной рекламе произведённые
+                                    нашей компанией</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

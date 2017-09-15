@@ -1,0 +1,215 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Комплексное решение{% endblock %}
+
+{% block content %}
+
+    <main class="page-main">
+        <div class="breadcrumb">
+            <div class="container">
+                {% include 'components/breadcrumb.twig' with {items: [{title: 'Главная', url: 'index.html'}, {title: 'Для салонов  красоты', url: '#'}]} %}
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    {% include 'elements/page-title.twig' with {title: 'Наружная релама для салонов красоты'} %}
+                    <div class="banner bg-brand mb-40 lg-mb-30 sm-mb-20">
+                        <div class="banner-image">
+                            <div class="banner-circle"></div>
+                            <div class="banner__icon bg-white">
+                                <svg class="icon-salon">
+                                    <use xlink:href="images/svg-icons.svg#salon"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="banner-contain fx fx-middle">
+                            <div class="text-white banner-right__contain">
+                                <p>Первая рекламная компания – оперативное и безупречное изготовление вывески для
+                                    салонов красоты, комплексные решения салонов красоты — наружная и внутренняя
+                                    реклама.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg-fx lg-fx-center">
+                        <div class="checked-list text-semibold fx fx-center lg-fx-column lg-fx-left">
+                            <div class="checked-item">
+                                <svg class="icon-check">
+                                    <use xlink:href="images/svg-icons.svg#check"/>
+                                </svg>
+                                <span>оперативно и качественно</span>
+                            </div>
+                            <div class="checked-item">
+                                <svg class="icon-check">
+                                    <use xlink:href="images/svg-icons.svg#check"/>
+                                </svg>
+                                <span>полный комплекс услуг</span>
+                            </div>
+                            <div class="checked-item">
+                                <svg class="icon-check">
+                                    <use xlink:href="images/svg-icons.svg#check"/>
+                                </svg>
+                                <span>по приятным ценам</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    <div class="text-paragraph">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci amet,
+                            assumenda beatae deserunt doloribus eaque ex excepturi fugit iste laudantium maxime nesciunt
+                            nobis perferendis quo quod quos rem, ullam voluptatibus. Consectetur cumque dolorum hic,
+                            incidunt laudantium nesciunt quod.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur debitis eos
+                            eveniet facere neque, officiis placeat possimus repellat sint! Ab architecto assumenda atque
+                            cupiditate deleniti error, ipsa magnam magni non omnis perspiciatis porro, rem, repellat
+                            rerum tenetur vel voluptas.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa ea hic iste libero nam
+                            nesciunt non perspiciatis quae tempora. Ab at atque beatae dolorem exercitationem explicabo
+                            fuga incidunt labore, mollitia, porro quaerat quos repudiandae saepe. Distinctio expedita id
+                            nostrum!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    <div class="fz25 lg-fz22 text-uppercase mb-50 lg-mb-30 text-center text-semibold">
+                        <p>Посмотрите рекламное оборудование, <br> которое мы предлагаем для оформления салонов красоты:
+                        </p>
+                    </div>
+                    <div class="grid grid-40 md-grid-20 fx fx-strech fx-center thumbnails-services thumbnails-services--small  mb-25">
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-signboard">
+                                                <use xlink:href="images/svg-icons.svg#signboard"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center"
+                                         data-mh="thumbnail-services-text">
+                                        <p>Объемные буквы</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-bukvi">
+                                                <use xlink:href="images/svg-icons.svg#bukvi"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center"
+                                         data-mh="thumbnail-services-text">
+                                        <p>Объемные буквы</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-plotter">
+                                                <use xlink:href="images/svg-icons.svg#plotter"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center"
+                                         data-mh="thumbnail-services-text">
+                                        <p>Объемные буквы</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-korob">
+                                                <use xlink:href="images/svg-icons.svg#korob"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center"
+                                         data-mh="thumbnail-services-text">
+                                        <p>Световые короба</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Брендмауэр – относительно «молодой» для нашей страны вид рекламной
+                                        конструкции</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "elements/more-el.twig" with {"text": "Вся продукция"} %}
+                </div>
+            </div>
+        </section>
+        {% include "sections/portfolio.twig" %}
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    <div class="banner banner--50x50 bg-grey">
+                        <div class="banner-image">
+                            <div class="banner-circle"></div>
+                            <div class="fx fx-left fx-middle p-rel pr-15">
+                                <div class="banner__icon">
+                                    <svg class="icon-info">
+                                        <use xlink:href="images/svg-icons.svg#info"/>
+                                    </svg>
+                                </div>
+                                <span class="ml-15 text-white">
+                                Если у Вас еще есть вопросы, как наружная реклама
+                                будет работать на благо Вашего предприятия – звоните! Наши менеджеры
+                                развеют все Ваши сомнения.
+                            </span></div>
+                        </div>
+                        <div class="banner-contain">
+                            <div class="fx fx-middle fx-center fx-column full-height">
+                                <div class="fz22 text-center mb-20 text-semibold">
+                                    <p>Оформите заказ сегодня!</p>
+                                </div>
+                                <div class="text-center">
+                                    <span class="btn btn-primary btn-primary--right btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21">
+                                         Отправить заявку
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        {% include "sections/clients.twig" %}
+    </main>
+
+
+
+
+{% endblock %}

@@ -5,6 +5,12 @@
 .fx-grow-1
 	flex-grow: 1
 	
+.lh1em
+	line-height: 1em
+	
+.text-regular
+	font-family: $font-base
+	
 .hidden
 	display: none !important
 	
@@ -73,6 +79,10 @@
 .list-mr-20
 	& > *:not(:last-child)
 		margin-right: 20px
+		
+//.list-mr-35
+//	& > *:not(:last-child)
+//		margin-right: 35px
 		
 .list-mr-15
 	& > *:not(:last-child)
@@ -181,8 +191,15 @@ a[class*="__phone"]
 	+respond-to(lg)
 		pointer-events: initial
 		&:hover
-			color: $brand * 0.8
+			color: $brand2 * 0.9
+			
+.page-header__mail
+	color: $text-primary
+	text-decoration: underline
 
+	&:hover
+		color: $brand2
+	
 a[class*="__mail"]
 	text-decoration: underline
 
@@ -191,6 +208,9 @@ a[class*="__mail"]
 
 .text-underline
 	text-decoration: underline
+	
+.text-semibold
+	font-family: $font-base-semibold
 
 .text-uppercase
 	text-transform: uppercase
@@ -283,6 +303,16 @@ a[class*="__mail"]
 	.xlg-text-#{$value}
 		+respond-to(xlg)
 			text-align: $value
+			
+.mt-75
+	margin-top: -75px
+	
+.pt-75
+	padding-top: 75px
+	
+.lg-mt-0
+	+respond-to(lg)
+		margin-top: 0
 
 //INDENTS
 
@@ -309,55 +339,55 @@ a[class*="__mail"]
 		+respond-to(xlg)
 			order: #{$value}
 
-@each $value in 0, 5, 7, 8, 9, 10, 11, 15, 20, 25, 30, 35, 40, 45, 50, 60, 65, 70, 80, 85, 90, 95, 100, 120, 150, 250
+@each $value in 0, 5, 7, 8, 9, 10, 11, 15, 20, 24, 25, 30, 32, 34, 35, 40, 45, 50, 60, 65, 70, 80, 85, 90, 95, 100, 120, 150, 250
 	.mb-#{$value}
-		margin-bottom: #{$value}px
+		margin-bottom: #{$value}px !important
 		
 	.list-mb-#{$value}
 		& > *:not(:last-child)
-			margin-bottom: #{$value}px
+			margin-bottom: #{$value}px !important
 			
 	.sm-list-mb-#{$value}
 		& > *:not(:last-child)
 			+respond-to(sm)
-				margin-bottom: #{$value}px
+				margin-bottom: #{$value}px !important
 			
 	.md-list-mb-#{$value}
 		& > *:not(:last-child)
 			+respond-to(md)
-				margin-bottom: #{$value}px
+				margin-bottom: #{$value}px !important
 			
 	.lg-list-mb-#{$value}
 		& > *:not(:last-child)
 			+respond-to(lg)
-				margin-bottom: #{$value}px
+				margin-bottom: #{$value}px !important
 			
 	.sm-mb-#{$value}
 		+respond-to(sm)
-			margin-bottom: #{$value}px
+			margin-bottom: #{$value}px !important
 	
 	.md-mb-#{$value}
 		+respond-to(md)
-			margin-bottom: #{$value}px
+			margin-bottom: #{$value}px !important
 	
 	.lg-mb-#{$value}
 		+respond-to(lg)
-			margin-bottom: #{$value}px
+			margin-bottom: #{$value}px !important
 	
 	.ml-#{$value}
-		margin-left: #{$value}px
+		margin-left: #{$value}px !important
 	
 	.sm-ml-#{$value}
 		+respond-to(sm)
-			margin-left: #{$value}px
+			margin-left: #{$value}px !important
 	
 	.md-ml-#{$value}
 		+respond-to(md)
-			margin-left: #{$value}px
+			margin-left: #{$value}px !important
 	
 	.lg-ml-#{$value}
 		+respond-to(lg)
-			margin-left: #{$value}px
+			margin-left: #{$value}px !important
 			
 	.mt-#{$value}
 		margin-top: #{$value}px

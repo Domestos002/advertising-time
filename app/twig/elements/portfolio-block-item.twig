@@ -1,9 +1,15 @@
-<div class="portfolio-item width-1-4 {{ classes }}" data-groups='["{{ groups }}"]'  data-title="{{ title }}">
-    <div class="portfolio-item__image">
-        <img src="http://lorempixel.com/g/{{ img }}" alt="">
-    </div>
-    <div class="portfolio-item__caption">
-        <div class="portfolio-item__title">
+<div class="portfolio-item width-1-4 lg-width-1-3 md-width-1-2 sm-width-12 {{ classes }}" data-fancybox='{{ fb }}' data-src-mobile="{{ srcMobile }}" data-src="{{ src }}">
+    <a href="#" class="portfolio-item__image">
+        {#<img src="http://lorempixel.com/g/{{ img }}" alt="">#}
+        <img src="images/portfolio1.jpg" alt="">
+        <div class="portfolio-item__overlay-panel">
+            <svg class="svg-icon icon-search">
+                <use xlink:href="images/svg-icons.svg#search"/>
+            </svg>
+        </div>
+    </a>
+    <div class="portfolio-item__caption" data-mh="portfolio-caption">
+        <div class="portfolio-item__title text-semibold">
             <p>{{ title }}</p>
         </div>
         <div class="portfolio-item__text">

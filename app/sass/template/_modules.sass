@@ -5,19 +5,33 @@
 	font-size: 20px
 	text-transform: uppercase
 	margin-bottom: 15px
+	font-family: $font-base-semibold
 	+respond-to(md)
 		font-size: 18px
-	
+		
+.goods-list
+
+
 .goods-item
+	+respond-to(lg)
+		background-color: $grey
+		padding:  30px 15px 30px 15px
+		border-bottom: 1px solid #ccc
+		margin: 0 -15px
 	&:not(:last-child)
-		margin-bottom: 30px
+		padding-bottom: 30px
 	
 .goods-item__caption-inner
 	margin-bottom: 20px
 	
+.goods-item__caption
+	+respond-to(md)
+		margin-right: 0
+	
 .goods-item__price
 	color: $brand
 	font-size: 21px
+	font-family: $font-base-semibold
 	& > span
 		font-size: 35px
 
@@ -34,9 +48,18 @@
 		margin-right: 0
 		margin-bottom: 20px
 		
+		
+.thumbnail-text
+	font-family: $font-base-semibold
 
 .section-title-wrapper
-	margin-bottom: 30px
+	margin-bottom: 50px
+	+respond-to(lg)
+		margin-bottom: 30px
+	+respond-to(md)
+		margin-bottom: 25px
+	.section-title
+		margin-bottom: 10px
 	
 .section-title__sub
 	text-align: center
@@ -46,6 +69,7 @@
 
 .section-title
 	font-size: 30px
+	font-family: $font-base-semibold
 	text-transform: uppercase
 	position: relative
 	text-align: center
@@ -75,22 +99,20 @@
 .thumbnail
 	display: flex
 	flex-direction: column
-	
+	max-width: 330px
+	+respond-to(lg)
+		max-width: 255px
 	
 .thumbnail-caption
 	margin-top: auto
 	font-family: $font-base-light
 	text-align: center
-	
+	+respond-to(lg)
+		font-size: 14px
 .big-img
 	height: 165px
-	width: auto
-	svg
-		height: 100%
-		width: auto
 
 .thumbnail__img
-	height: 106px
 	margin-bottom: 20px
 	display: flex
 	align-items: flex-end
@@ -103,7 +125,8 @@
 .banner__icon
 	width: 160px
 	height: 160px
-	border: 8px solid #ffffff
+	flex-shrink: 0
+	border: 6px solid #eee
 	background-color: $brand
 	display: flex
 	border-radius: 100%
@@ -113,6 +136,9 @@
 	justify-content: center
 	img
 		width: 50% // 940 260
+	&.bg-white
+		background-color: #fff
+	
 
 .p-0-135
 	padding: 0 135px
@@ -123,17 +149,27 @@ table
 			text-align: left
 		td:last-child
 			text-align: right
+			
+.pr-15
+	padding-right: 15px
 
 .banner
 	border-radius: 12px
 	display: flex
+	align-items: center
 	justify-content: space-between
-	padding: 20px 0
+	padding: 35px 0
 	overflow: hidden
 	min-height: 250px
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+		height: 250px
 	+respond-to(sm)
-		margin: 0 -15px
 		border-radius: 0
+	+respond-to(lg)
+		min-height: auto
+		min-height: initial
+		border-radius: 0
+		margin: 0 -15px
 	&.banner--reverse
 		flex-direction: row-reverse
 		.banner-image
@@ -149,17 +185,20 @@ table
 	.banner-image
 		position: relative
 		width: 325px
+		min-height: 200px
 		display: flex
 		align-items: center
 		justify-content: center
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+			height: 200px
 		&::before
 			content: ''
 			background-color: $brand2
 			position: absolute
-			left: -15%
-			top: -66%
-			width: 359px
-			height: 460px
+			left: -50%
+			top: -105%
+			width: 480px
+			height: 600px
 			border: 8px solid #ffffff
 			border-radius: 100%
 		+respond-to(dk)
@@ -168,7 +207,7 @@ table
 				content: ''
 				background-color: $brand2
 				position: absolute
-				left: -45%
+				left: -80%
 				
 		+respond-to(lg)
 			display: none
@@ -187,7 +226,36 @@ table
 			padding-left: 135px
 		+respond-to(md)
 			padding: 0 15px
-	
+	&.banner--50x50
+		padding: 20px
+		+respond-to(lg)
+			min-height: auto
+			min-height: initial
+			margin: 0 -15px
+		.banner-image
+			width: 50%
+			&::before
+				width: calc(100% + 85px)
+				left: -15%
+			
+		.banner-contain
+			width: 50%
+			padding-right: 0
+			+respond-to(lg)
+				width: 100%
+				padding-left: 0
+		.banner__icon
+			width: 130px
+			height: 130px
+		.icon-info
+			width: 40px
+			height: 90px
+	&.bg-bilboard
+		background-image: url(../images/banner.svg)
+		background-repeat: no-repeat
+		-webkit-background-size: contain
+		background-size: contain
+		background-position: 100% 10px
 .banner__v2
 	padding: 0
 	min-height: 395px
@@ -197,8 +265,11 @@ table
 	background-color: $grey
 	position: relative
 	overflow: hidden
-	+respond-to(dk)
+	+respond-to(lg)
+		min-height: auto
 		min-height: initial
+		flex-direction: column
+		margin: 0 -15px
 	+respond-to(sm)
 		margin: 0 -15px
 	.banner-left
@@ -207,20 +278,18 @@ table
 		padding: 30px 0 30px 30px
 		&::before
 			display: none
-		+respond-to(dk)
+		+respond-to(lg)
 			width: 100%
-		
 			padding: 30px
 		+respond-to(md)
 			padding: 15px
 			
-			//text-align: center
 	.banner-right
 		width: 497px
-		height: 580px
+		height: 615px
 		position: absolute
 		right: -98px
-		top: -95px
+		top: -110px
 		overflow: hidden
 		border-radius: 100%
 		border: 8px solid #ffffff
@@ -228,9 +297,11 @@ table
 			width: 100%
 			height: 100%
 			object-fit: contain
-		+respond-to(dk)
+		+respond-to(lg)
 			display: none
 			
+.pl-20
+	padding-left: 20px
 	
 .btn-banner
 	position: absolute
@@ -253,6 +324,7 @@ table
 	
 .uk-pagination
 	display: inline-block
+	font-family: $font-base-semibold
 	& > li
 		& > a, & > span
 			border-radius: 12px
@@ -313,3 +385,48 @@ table
 	&.hamburger-slide-toggle
 		border-radius: 100%
 		background: $brand2
+		
+.checked-item
+	display: flex
+	align-items: center
+	.icon-check
+		margin-right: 10px
+	&:not(:last-child)
+		margin-right: 35px
+	+respond-to(lg)
+		&:not(:last-child)
+			margin-right: 0
+			margin-bottom: 20px
+			
+.modal-close-btn, .icon-close-wrapper
+	line-height: 0
+	font-size: 0
+	cursor: pointer
+	+respond-to(sm)
+		display: none
+	svg
+		+trans()
+		.icon-close__circle
+			fill: $brand2
+			+trans()
+	&:hover
+		svg
+			.icon-close__circle
+				fill: $brand2 * 0.9
+				
+.modal-close-btn
+	position: absolute
+	top: 10px
+	right: 10px
+	
+.modal-order
+	min-width: 310px
+	width: 100% !important
+	width: calc(100% - 15px) !important
+	max-width: 860px
+	border-radius: 10px
+	border: 2px solid #ffffff
+	background-color: $brand
+	padding: 40px
+	+respond-to(lg)
+		padding: 20px

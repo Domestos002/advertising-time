@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <div class="section-inner">
+            {% if type == 'titled' %}
+                <div class="fz30 md-fz22 text-uppercase mb-20 text-center">
+                    <p>{{ title }}</p>
+                </div>
+            {% endif %}
+            <div class="grid grid-40 md-grid-20 fx fx-strech fx-center thumbnails-services mb-25">
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "signboard", "title" : " Вывески", "text" : "Одни из самых сложных в производстве рекламные конструкций"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "bukvi", "title" : "Объемные буквы", "text" : "Рекламный штендер – популярная выносная рекламная конструкция"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "plotter", "title" : "Объемные буквы", "text" : "Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "korob", "title" : "Световые короба", "text" : "Брендмауэр – относительно «молодой» для нашей страны вид рекламной конструкции"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "avto", "title" : "Брендирование авто", "text" : "Внутренняя реклама  является не менее важным элементом в работе компании"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "showcase", "title" : "Оформление витрин", "text" : "Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "stend", "title" : "Информационные стенды", "text" : "Брендмауэр – относительно «молодой» для нашей страны вид рекламной конструкции"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "shtender", "title" : "Штендеры", "text" : "Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов"} %}
+                {% include "../elements/services-thumbnail-item.twig" with {"icon": "tablichka", "title" : "Таблички", "text" : "Рекламный штендер – популярная выносная рекламная конструкция"} %}
+            </div>
+            {% include "../elements/more-el.twig" with {"text": "Вся продукция"} %}
+        </div>
+    </div>
+</section>

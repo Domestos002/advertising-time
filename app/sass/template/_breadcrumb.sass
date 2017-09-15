@@ -1,32 +1,32 @@
 .breadcrumbs
-	display: flex
-	align-items: center
 	list-style: none
-	padding: 15px 0
+	padding: 20px 0
 	font-family: $font-base-light
-	margin-top: -42px
-	flex-wrap: wrap
-	
-	.breadcrumbs__item
-		padding-top: 10px
-		display: flex
-		align-items: center
-		&:not(:last-child)
-			margin-right: 15px
+	margin-top: -35px
+	white-space: nowrap
+	text-overflow: ellipsis
+	color: $brand
+	overflow: hidden
+	& > *
 		&:not(:first-child)
 			position: relative
 			&::before
-				display: block
+				display: inline-block
+				vertical-align: middle
 				content: '|'
+				font-size: 15px
 				font-family: $font-base-light
 				color: $brand
-				
+				margin-left: 6px
 				margin-right: 10px
 	
 	.breadcrumbs__text,
 	.breadcrumbs__link
 		color: $text-primary
 		font-size: 15px
+		+respond-to(sm)
+			font-size: 12px
+		
 	
 	.breadcrumbs__text
 		color: $brand

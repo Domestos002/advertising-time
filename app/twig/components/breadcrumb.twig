@@ -1,9 +1,9 @@
-<ul class="breadcrumbs{% if type == 'dark'  %} breadcrumbs-dark{% endif %}">
+<div class="breadcrumbs{% if type == 'dark'  %} breadcrumbs-dark{% endif %}">
     {% for item in items %}
         {% if loop.index != items.length %}
-            <li class="breadcrumbs__item"><a href="{{ item.url }}" class="breadcrumbs__link">{{ item.title }}</a></li>
+            <a href="{{ item.url }}" class="breadcrumbs__link">{{ item.title }}</a>
         {% else %}
-            <li class="breadcrumbs__item"><span class="breadcrumbs__text">{{ item.title }}</span></li>
+            <span class="breadcrumbs__text">{{ item.title }}</span>
         {% endif %}
     {% endfor %}
-</ul>
+</div>

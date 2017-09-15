@@ -60,5 +60,41 @@
     <!-- Scripts -->
     {% include "scripts.twig" %}
 </div>
+<div id="modal-order" class="uk-modal">
+    <div class="uk-modal-dialog modal-order p-rel">
+        <a class="uk-modal-close uk-close"></a>
+        <form class="uk-form">
+            <div class="text-center fz28 md-fz22 text-semibold text-uppercase mb-40 md-mb-25">
+                <p>Оформление заявки</p>
+            </div>
+            <span class="modal-close-btn uk-modal-close">
+                <svg class="svg-icon icon-close" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle class="icon-close__circle" cx="256" cy="256" r="253.44"/><path d="M350.02 144.066l17.52 17.522c6.047 6.047 6.047 15.852 0 21.9l-183.933 183.93c-6.047 6.05-15.852 6.048-21.9 0l-17.52-17.52c-6.048-6.048-6.048-15.853 0-21.9l183.93-183.934c6.05-6.046 15.854-6.046 21.902.002z" fill="#FFF"/><path  d="M367.54 349.9l-17.522 17.52c-6.047 6.048-15.852 6.048-21.9 0L144.186 183.49c-6.047-6.047-6.047-15.852 0-21.9l17.522-17.522c6.047-6.047 15.852-6.047 21.9 0L367.54 328c6.048 6.047 6.048 15.852 0 21.9z" fill="#FFF"/></svg>
+            </span>
+            <div class="grid grid-30 mb-20 fx-strech">
+                <div class="width-1-2 md-width-12">
+                    <div class="list-mb-34 md-list-mb-20">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Представьтесь, пожалуйста" />
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Ваша почта" />
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="phone" type="text" placeholder="Номер телефона" />
+                        </div>
+                    </div>
+                </div>
+                <div class="width-1-2 md-width-12 fx">
+                    <div class="input-wrapper full-height full-width">
+                        <textarea class="full-height full-width" name="" id="" cols="30" rows="7" placeholder="Текстовое сообщение"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <span class="minw300 btn btn-primary btn-primary--top btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21">отправить заявку</span>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

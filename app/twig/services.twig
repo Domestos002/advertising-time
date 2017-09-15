@@ -1,6 +1,6 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Главная страница{% endblock %}
+{% block pageTitle %}Серфисы{% endblock %}
 
 {% block content %}
 
@@ -13,6 +13,48 @@
         <section>
             <div class="container">
                 <div class="section-inner">
+                    <div class="banner__v2">
+                        <div class="img-wrapper lh-0 xlg-hidden">
+                            <img class="full-width" src="http://via.placeholder.com/1000x350" alt="">
+                        </div>
+                        <div class="banner-left">
+                            <div class="text-brand text-semibold fz40 md-fz25 sm-fz22 text-uppercase mb-25">
+                                <p>Изготовление
+                                    объемных букв
+                                    в Воронеже</p>
+                            </div>
+                            <div class="mb-30 text-light fz23">
+                                <ul class="marked-list mb-20">
+                                    <li>Изготовление объемных букв в Воронеже
+                                        Один из самых красивых, популярных,
+                                        эффективных видов наружной рекламы.
+                                    </li>
+                                </ul>
+                                <div class="text-brand fx21 text-regular pl-20 text-semibold">
+                                    <p>от<span class="fz35 inline ml-5 mr-5 ">25</span>руб/см</p>
+                                </div>
+                            </div>
+                            <div class="fx fx-left fx-middle md-fx-column  md-full-width">
+                                <div class="w-235 md-full-width md-mb-20 md-text-center">
+                                    <span class="mr-15 btn btn-primary btn-primary--right btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21" data-uk-modal="{target:'#modal-order', center:true}">ОТПРАВИТЬ ЗАЯВКУ</span>
+                                </div>
+                                <div class="text-uppercase text-semibold">
+                                    <p>Оставьте заявку
+                                        и получите скидку 10%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-right">
+                            <img src="http://lorempixel.com/clothe/388/395/" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-inner">
+                    {% include 'elements/page-title.twig' with {title: 'Объемные буквы в Воронеже'} %}
                     <div class="services-block grid grid-20">
                         <div class="services-block__sidebar width-3 xlg-visible">
                             <div class="sidebar-navbar">
@@ -88,12 +130,8 @@
                             </div>
                         </div>
                         <div class="services-block__main width-9 lg-width-12">
-
-                            <div class="mb-35">
-                                <div class="mb-40">
-                                <div class="fz30 md-fz22 text-uppercase mb-20">
-                                    <p>Объемные буквы в Воронеже </p>
-                                </div>
+                            <div class="mb-20">
+                                <div class="mb-40 md-mb-20">
                                 <div class="text-paragraph">
                                     <p>Рекламные вывески из объемных букв широко применяются как в наружной, так и в
                                         интерьерной рекламе(внутри помещений). Они используются при оформлении банков,
@@ -126,7 +164,7 @@
                         <div class="banner-image">
                             <div class="banner-circle"></div>
                             <div class="banner__icon">
-                                <svg class="icon-gift"><use xlink:href="images/svg-icons.svg#gift" /></svg>
+                                <svg class="icon-info"><use xlink:href="images/svg-icons.svg#info" /></svg>
                             </div>
                         </div>
                         <div class="banner-contain fx fx-middle">
@@ -147,37 +185,85 @@
             <div class="container">
                 <div class="section-inner">
                     {% include "elements/section-title.twig" with {"title": "Наша продукция" ,"type" : "big"} %}
-                    <div class="grid grid-20 button-group fx-center">
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Вывески</a>
+                    <div class="grid grid-40 md-grid-20 fx fx-strech fx-center thumbnails-services thumbnails-services--small  mb-25">
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-signboard">
+                                                <use xlink:href="images/svg-icons.svg#signboard"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center" data-mh="thumbnail-services-text">
+                                        <p>Объемные буквы</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Объемные буквы</a>
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-bukvi">
+                                                <use xlink:href="images/svg-icons.svg#bukvi"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center" data-mh="thumbnail-services-text">
+                                        <p>Объемные буквы</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Баннеры</a>
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-plotter">
+                                                <use xlink:href="images/svg-icons.svg#plotter"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center" data-mh="thumbnail-services-text">
+                                        <p>Объемные буквы</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Световые короба</a>
-                        </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Брендирование
-                                авто</a>
-                        </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Оформление витрин</a>
-                        </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Информационные
-                                стенды</a>
-                        </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Штендеры</a>
-                        </div>
-                        <div class="width-1-3 lg-width-1-2 md-width-12">
-                            <a href="#" class="btn btn-primary btn-primary-outline-bg1 full-width">Таблички</a>
+                        <div class="width-1-4 lg-width-1-2 sm-width-12">
+                            <div class="thumbnail centered">
+                                <div class="thumbnail__top">
+                                    <div class="thumbnail__img" data-mh="prod-thumbnail-img">
+                                        <a href="#" class="lh-0">
+                                            <svg class="svg-icon icon-korob">
+                                                <use xlink:href="images/svg-icons.svg#korob"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="fz22 lg-fz18 text-uppercase thumbnail-text fx fx-middle fx-center" data-mh="thumbnail-services-text">
+                                        <p>Световые короба</p>
+                                    </div>
+                                </div>
+                                <div class="thumbnail-caption" data-mh="thumbnail-services-caption">
+                                    <p>Брендмауэр – относительно «молодой» для нашей страны вид рекламной конструкции</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    {% include "elements/more-el.twig" with {"text": "Вся продукция"} %}
                 </div>
             </div>
         </section>

@@ -1,12 +1,10 @@
-<div class="thumbnail">
-    <div class="thumbnail__img fx fx-bottom">
-        <a href="#" class="lh-0">
-            <svg class="svg-icon icon-{{ icon }}">
-                <use xlink:href="images/svg-icons.svg#{{ icon }}"/>
-            </svg>
-        </a>
+<div class="thumbnail {{ classes }}">
+    <div class="thumbnail__img fx fx-bottom lh-0">
+        <svg class="svg-icon icon-{{ icon }}">
+            <use xlink:href="images/svg-icons.svg#{{ icon }}"/>
+        </svg>
     </div>
-    <div class="fz20 text-uppercase text-center">
+    <div class="fz20 md-fz18 text-uppercase text-semibold text-center">
         <p>{{ text }}</p>
     </div>
 </div>

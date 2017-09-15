@@ -8,142 +8,130 @@
         <section>
             <div class="container">
                 <div class="section-inner">
-                    <div class="banner-carousel">
-                        {#{% for 1 in 1..3  %}#}
-                        <div class="banner bg-brand">
-                            <div class="banner-image">
-                                <div class="banner-circle"></div>
-                                <div class="banner__icon">
-                                    <svg class="icon-gift"><use xlink:href="images/svg-icons.svg#gift" /></svg>
-                                </div>
+                    <div class="banner__v2">
+                        <div class="img-wrapper lh-0 xlg-hidden">
+                            <img class="full-width" src="http://via.placeholder.com/1000x350" alt="">
+                        </div>
+                        <div class="banner-left">
+                            <div class="fz22 pb-7 text-semibold border-2-brand md-border-2-brand-none text-uppercase mb-25 md-mb-10 sm-md-0 inline-flex">
+                                <p>рекламно-производственная компания</p>
                             </div>
-                            <div class="banner-contain">
-                                <div class="text-white banner-right__contain">
-                                    <div class="md-mb-20">
-                                        <div class="mb-15">
-                                            <div class="fz25 mb-10"><p>При заказе</p></div>
-                                            <div class="fz50 md-fz35 fx fx-left fx-middle lg-fx-center list-mr-10">
-                                                <p>от</p>
-                                                <span class="inline fz70 md-fz45 sm-fz40 text-bold">50 000</span>
-                                                <p>руб.</p>
-                                            </div>
-                                        </div>
-                                        <div class="">
-                                            <div class="fz25 mb-10">
-                                                <p>Баннер "Скоро открытие"</p>
-                                            </div>
-                                            <div class="text-uppercase fz50 md-fz35">
-                                                <p>В подарок!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-center sm-md-visible">
-                                        <a href="#"
-                                           class="btn btn-primary bg-brand2 btn-primary--bordered btn-primary--top btn-primary--right-shadow">
-                                            подробнее
-                                        </a>
-                                    </div>
+                            <div class="text-brand text-semibold fz40 md-fz25 text-uppercase mb-25">
+                                <p>Мы знаем как сделать
+                                    Вас заметнее!</p>
+                            </div>
+                            <div class="mb-30 text-light fz23">
+                                <ul class="marked-list">
+                                    <li>Изготовление наружной
+                                        и внутренней рекламы
+                                        для любых видов бизнеса
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fx fx-left fx-middle md-fx-column  md-full-width">
+                                <div class="w-235 md-full-width md-mb-20 md-text-center">
+                                    <span class="mr-15 btn btn-primary btn-primary--right btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21">ОТПРАВИТЬ ЗАЯВКУ</span>
                                 </div>
-                                <a href="#"
-                                   class="btn sm-md-hidden btn-banner btn-primary bg-brand2 btn-primary--bordered btn-primary--left fz21">ПОДРОБНЕЕ</a>
+                                <div class="text-uppercase text-semibold">
+                                    <p>Оставьте заявку
+                                        и получите скидку 10%</p>
+                                </div>
                             </div>
                         </div>
-                        {#{% endfor %}#}
+                        <div class="banner-right">
+
+                            <img src="images/221.png" alt="">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div class="container">
+            <div class="container lg-p0">
                 <div class="section-inner">
-                    <div class="banner-carousel">
-                        {#{% for 1 in 1..3  %}#}
-                        <div class="banner__v2">
-                            <div class="banner-left">
-                                <div class="fz22 border-2-brand md-border-2-brand-none text-uppercase mb-25 inline-flex">
-                                    <p>рекламно-производственная компания</p>
-                                </div>
-                                <div class="text-brand fz40 md-fz25 text-uppercase mb-25">
-                                    <p>Мы знаем как сделать
-                                        Вас заметнее!</p>
-                                </div>
-                                <div class="mb-30 text-light fz23">
-                                    <ul class="marked-list">
-                                        <li>Изготовление наружной
-                                            и внутренней рекламы
-                                            для любых видов бизнеса
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="fx fx-left fx-middle md-fx-column  md-full-width">
-                                    <div class="w-235 md-full-width md-mb-20 md-text-center">
-                                        <span class="mr-15 btn btn-primary btn-primary--right btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21">ОТПРАВИТЬ ЗАЯВКУ</span>
-                                    </div>
-                                    <div class="text-uppercase">
-                                        <p>Оставьте заявку
-                                            и получите скидку 10%</p>
+                    <div class="banner-carousel owl-carousel dots mb-90">
+                        {% for 1 in 1..3 %}
+                            <div class="banner bg-brand bg-bilboard">
+                                <div class="banner-image">
+                                    <div class="banner-circle"></div>
+                                    <div class="banner__icon">
+                                        <svg class="icon-gift">
+                                            <use xlink:href="images/svg-icons.svg#gift"/>
+                                        </svg>
                                     </div>
                                 </div>
+                                <div class="banner-contain">
+                                    <div class="text-white banner-right__contain text-semibold">
+                                        <div class="md-mb-20">
+                                            <div class="mb-15">
+                                                <div class="fz25 mb-10"><p>При заказе</p></div>
+                                                <div class="fz50 md-fz35 sm-fz30 fx fx-left fx-middle lg-fx-center list-mr-10">
+                                                    <p>от</p>
+                                                    <span class="inline fz70 md-fz45 sm-fz40 sm-fz35 text-bold">50 000</span>
+                                                    <p>руб.</p>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="fz25 mb-10">
+                                                    <p>Баннер "Скоро открытие"</p>
+                                                </div>
+                                                <div class="text-uppercase fz50 md-fz35 sm-fz30">
+                                                    <p>В подарок!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center sm-md-visible">
+                                            <a href="#"
+                                               class="btn btn-primary bg-brand2 btn-primary--bordered btn-primary--top btn-primary--right-shadow">
+                                                подробнее
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                       class="btn sm-md-hidden btn-banner btn-primary bg-brand2 btn-primary--left-shadow btn-primary--bordered btn-primary--left fz21">ПОДРОБНЕЕ</a>
+                                </div>
                             </div>
-                            <div class="banner-right">
-
-                                <img src="images/221.png" alt="">
-
-                            </div>
-                        </div>
-                        {#{% endfor %}#}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container">
-                <div class="section-inner">
-                    <div class="grid grid-40 md-grid-20 fx fx-strech fx-center thumbnails-services">
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "signboard", "title" : " Вывески", "text" : "Одни из самых сложных в производстве рекламные конструкций"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "bukvi", "title" : "Объемные буквы", "text" : "Рекламный штендер – популярная выносная рекламная конструкция"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "plotter", "title" : "Объемные буквы", "text" : "Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "korob", "title" : "Световые короба", "text" : "Брендмауэр – относительно «молодой» для нашей страны вид рекламной конструкции"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "avto", "title" : "Брендирование авто", "text" : "Внутренняя реклама  является не менее важным элементом в работе компании"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "showcase", "title" : "Оформление витрин", "text" : "Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "stend", "title" : "Информационные стенды", "text" : "Брендмауэр – относительно «молодой» для нашей страны вид рекламной конструкции"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "shtender", "title" : "Штендеры", "text" : "Отличный вариант для рекламы автозаправочных станций, отелей, автосалонов"} %}
-                        {% include "elements/services-thumbnail-item.twig" with {"icon": "tablichka", "title" : "Таблички", "text" : "Рекламный штендер – популярная выносная рекламная конструкция"} %}
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% include "sections/production.twig" %}
         <section class="bg-brand">
             <div class="container">
                 <div class="section-inner big-label">
                     <div class="big-label-area ">
-                        <div class="fz35 md-fz25 text-uppercase text-center mb-10">
+                        <div class="fz35 md-fz22 text-uppercase text-center mb-10 text-semibold">
                             <p>Почему лучше заказать у нас?</p>
                         </div>
                         <div class="fx fx-center full-width xlg-visible">
                             <div class="big-img ml-11">
                                 <svg class="svg-icon icon-watch">
-                                    <use xlink:href="images/svg-icons.svg#watch" />
+                                    <use xlink:href="images/svg-icons.svg#watch"/>
                                 </svg>
                             </div>
                         </div>
                     </div>
                     <div class="grid grid-20 lg-grid-30 sm-grid-20 fx-strech thumbnails-banner">
-                        <div class="width-3 lg-width-6 sm-width-12 fx-column  fx-justify lg-order-0">
+                        <div class="width-3 lg-width-6 sm-width-12 fx fx-column  fx-justify lg-order-0 pt-75">
                             {% include "elements/thumbnail-banner.twig" with {"icon": "calendar", "text" : " Быстрые сроки"} %}
                             {% include "elements/thumbnail-banner.twig" with {"icon": "design", "text" : " Дизайн макет бесплатно"} %}
                         </div>
-                        <div class="width-6 lg-width-12 m-top-auto lg-order-2">
-                            <div class="fz45 lg-fz35 md-fz25 lh-normal text-center text-primary mb-20">
-                                <a href="#">Узнать стоимость
-                                    за 15 минут</a>
+                        <div class="width-6 lg-width-12 m-top-165 lg-mt-0 lg-order-2">
+                            <div class="fz30 lg-fz35 md-fz25 text-semibold lh-normal text-center text-primary mb-20">
+                                <p>Узнать стоимость <br class="xlg-visible">
+                                    за 15 минут</p>
                             </div>
-                            <div class="fz20 text-white text-center">
-                                <p>Быстро подготовим комерческое
+                            <div class="fz20 text-white text-center mb-45 xlg-visible">
+                                <p>Быстро подготовим комерческое <br>
                                     предложение с ценой проекта</p>
                             </div>
+                            <div class="text-center">
+                                <span class="minw300 btn btn-primary btn-primary--top btn-primary--bordered btn-primary--right-shadow bg-brand2 fz21" data-uk-modal="{target:'#modal-order', center:true}">отправить заявку</span>
+                            </div>
                         </div>
-                        <div class="width-3 lg-width-6 sm-width-12 fx-column  fx-justify lg-order-1">
+                        <div class="width-3 lg-width-6 sm-width-12 fx fx-column  fx-justify lg-order-1 pt-75">
                             {% include "elements/thumbnail-banner.twig" with {"icon": "production", "text" : " Собственное производство"} %}
                             {% include "elements/thumbnail-banner.twig" with {"icon": "note", "text" : " Согласование вывесок"} %}
                         </div>
@@ -155,42 +143,22 @@
             <div class="container">
                 <div class="section-inner">
                     {% include "elements/section-title.twig" with {"title": "Наружная реклама в Воронеже", "type" : "subtitled", "subtitle" : "комплексное обслуживание клиентов"} %}
-                    <div class="grid grid-50 md-grid-20 fx-center icon-links">
+                    <div class="grid grid-50 md-grid-20 fx-center icon-links mb-25">
                         {% include "elements/advertising-item.twig" with {"icon": "taxi", "text" : " Для автомагазинов"} %}
                         {% include "elements/advertising-item.twig" with {"icon": "groceries", "text" : "Для продуктовых магазинов"} %}
                         {% include "elements/advertising-item.twig" with {"icon": "salon", "text" : "Для салонов красоты"} %}
                         {% include "elements/advertising-item.twig" with {"icon": "plus", "text" : "Для аптек"} %}
-                        {% include "elements/advertising-item.twig" with {"icon": "meal", "text" : " Для магазинов разливных напитков"} %}
+                        {% include "elements/advertising-item.twig" with {"icon": "beer", "text" : " Для магазинов разливных напитков"} %}
                         {% include "elements/advertising-item.twig" with {"icon": "meal", "text" : "Для ресторанов и кафе"} %}
                         {% include "elements/advertising-item.twig" with {"icon": "clothe", "text" : "Для магазинов женской и мужской одежды"} %}
                         {% include "elements/advertising-item.twig" with {"icon": "drill", "text" : "Для строительных магазинов"} %}
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-grey">
-            <div class="container">
-                <div class="section-inner">
-                    {% include "elements/section-title.twig" with {"title": "Наше портфолио" ,"type" : "big"} %}
-                    <div class="portfolio-slider owl-carousel navs-size-1 dots mb-65">
-                        {% for 1 in 1..6 %}
-                            <div class="portfolio-slider__item">
-                                <a href="#" class="img-link"><img src="images/portfolio1.jpg" alt=""></a>
-                            </div>
-                            <div class="portfolio-slider__item">
-                                <a href="#" class="img-link"><img src="images/portfolio2.jpg" alt=""></a>
-                            </div>
-                            <div class="portfolio-slider__item">
-                                <a href="#" class="img-link"><img src="images/portfolio3.jpg" alt=""></a>
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="text-center text-brand text-underline text-light fz16"><a href="#" class="">Все
-                            портфолио</a></div>
-                </div>
-            </div>
-        </section>
+                    {% include "elements/more-el.twig" with {"text": "Другая деятельность"} %}
 
+                </div>
+            </div>
+        </section>
+        {% include "sections/portfolio.twig" %}
         <section>
             <div class="container">
                 <div class="section-inner ">
@@ -221,19 +189,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="fz30 md-fz25 sm-fz22 mb-40 text-center text-uppercase">
-                        <p>Наши клиенты</p>
-                    </div>
-                    <div class="clients-slider owl-carousel navs-size-1">
-                        {% for 1 in 1..20 %}
-                            <div class="clients-slider__item navs-size-2">
-                                <img src="images/clients2.jpg" alt="">
-                            </div>
-                        {% endfor %}
-                    </div>
                 </div>
             </div>
         </section>
+        {% include "sections/clients.twig" %}
     </main>
 
 

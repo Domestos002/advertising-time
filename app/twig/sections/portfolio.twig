@@ -1,0 +1,22 @@
+<section class="bg-grey">
+    <div class="container">
+        <div class="section-inner">
+            {% include "../elements/section-title.twig" with {"title": "Наше портфолио" ,"type" : "big"} %}
+            <div class="portfolio-slider owl-carousel navs-size-1 dots mb-65">
+                {% for 1 in 1..6 %}
+                    <div class="portfolio-slider__item">
+                        <a href="#" class="img-link"><img src="images/portfolio1.jpg" alt=""></a>
+                    </div>
+                    <div class="portfolio-slider__item">
+                        <a href="#" class="img-link"><img src="images/portfolio2.jpg" alt=""></a>
+                    </div>
+                    <div class="portfolio-slider__item">
+                        <a href="#" class="img-link"><img src="images/portfolio3.jpg" alt=""></a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="text-center text-brand text-underline text-light fz16"><a href="#" class="">Все
+                    портфолио</a></div>
+        </div>
+    </div>
+</section>
