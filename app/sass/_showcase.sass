@@ -1,0 +1,32 @@
+.showcase-thumbnails
+	display: flex
+	justify-content: flex-start
+	line-height: 0
+	+respond-to(lg)
+		margin-bottom: 20px
+	
+.showcase-main
+	line-height: 0
+	margin-bottom: 24px
+	img
+		width: 100%
+		height: auto
+
+.showcase-thumbnail
+	cursor: pointer
+	display: inline-block
+	width: 110px
+	height: auto
+	
+	&:not(:last-child)
+		margin-right: 20px
+	img
+		width: 100%
+		height: auto
+		border: 1px solid #eee
+	border-top: 3px solid transparent
+	&.active
+		border-top: 3px solid $brand2
+	+respond-to(lg)
+		width: auto
+		width: initial

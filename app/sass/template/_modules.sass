@@ -21,8 +21,7 @@
 	&:not(:last-child)
 		padding-bottom: 30px
 	
-.goods-item__caption-inner
-	margin-bottom: 20px
+
 	
 .goods-item__caption
 	+respond-to(md)
@@ -342,11 +341,11 @@ table
 			+respond-to(sm)
 				width: 30px
 				height: 30px
-		&:last-child > a, &:first-child > a
-			display: flex
-			align-items: center
-			justify-content: center
-			background-color: transparent
+	&__arrow-left > a, &__arrow-right > a, &__arrow-left > span, &__arrow-right > span
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: transparent !important
 			
 			
 .uk-pagination>.uk-active>span
@@ -359,8 +358,18 @@ table
 .slideout-panel
 	will-change: initial
 	
-
-	
+.goods-item__caption-inner
+	margin-bottom: 20px
+	p+p
+		margin-top: 15px
+	h3
+		font-size: 20px
+		text-transform: uppercase
+		margin-bottom: 15px
+		font-family: $font-base-semibold
+		+respond-to(md)
+			font-size: 18px
+			
 .hamburger
 	flex-direction: column
 	width: 40px
@@ -402,8 +411,6 @@ table
 	line-height: 0
 	font-size: 0
 	cursor: pointer
-	+respond-to(sm)
-		display: none
 	svg
 		+trans()
 		.icon-close__circle
@@ -419,9 +426,11 @@ table
 	top: 10px
 	right: 10px
 	
+.fancybox-slide>div
+	overflow: visible !important
+
 .modal-order
 	min-width: 310px
-	width: 100% !important
 	width: calc(100% - 15px) !important
 	max-width: 860px
 	border-radius: 10px
@@ -430,3 +439,10 @@ table
 	padding: 40px
 	+respond-to(lg)
 		padding: 20px
+	&.uk-modal-dialog
+		+respond-to(lg)
+			padding: 45px 20px
+			
+	.input-wrapper input, .input-wrapper textarea
+		+respond-to(md)
+			font-size: 16px
